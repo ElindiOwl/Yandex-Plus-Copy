@@ -1,0 +1,36 @@
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.menu-word {
+  margin-left: auto;
+  margin-right: 5px;
+  cursor: pointer;
+  color: black;
+  margin-bottom: 5px;
+}
+
+.Accordion {
+  border: none;
+  background-color: transparent;
+  color: black;
+  box-shadow: none;
+  --bs-accordion-border-color: none;
+}
+
+.accordion {
+  --bs-accordion-border-color: transparent;
+}
+
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.accordion-button:focus {
+  z-index: 3;
+  outline: 0;
+  box-shadow: none;
+}

@@ -1,0 +1,49 @@
+.pointsText {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 22px 33px 27px;
+}
+
+.plusPointsH6 {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.plusSVGArrow {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  margin-left: 30px;
+  color: rgba(115, 115, 115, 0.73);
+}
+
+.plusPointsP {
+  grid-column: 1;
+  grid-row: 2;
+  align-self: center;
+  color: rgba(115, 115, 115, 0.73);
+  font-size: 13px;
+  line-height: 13.9px;
+}
+
+
+.Points {
+  grid-column: 1;
+  grid-row: 3;
+  align-self: center;
+  display: flex;
+  justify-content: left;
+}
+
+.pointsP {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 20px;
+}
+
+.pointsSVG {
+  margin-left: 5px;
+  margin-top: 29px;
+}

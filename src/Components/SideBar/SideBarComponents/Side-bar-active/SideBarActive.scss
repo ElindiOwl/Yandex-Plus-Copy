@@ -1,0 +1,68 @@
+.plusBackground {
+  background-color: white;
+  width: 170px;
+  height: 103px;
+  margin: 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.plusInside {
+  padding: 10px;
+}
+
+.pluslink {
+  background-color: white;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.linkDiv {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+}
+
+.plusActive {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.plusImage {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  width: 30px;
+  height: 30px;
+  margin-left: 55px;
+  margin-bottom: 10px;
+}
+
+.plusText {
+  font-size: 13px;
+  color: rgba(115, 115, 115, 0.91);
+  grid-column: 1 / span 2;
+  grid-row: 2;
+  justify-self: left;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.plusSVG {
+  grid-column: 2;
+  grid-row: 2;
+  color: rgba(115, 115, 115, 0.91);
+  margin-top: 26px;
+}
+
+.pluslink:hover,
+.pluslink:hover .linkDiv,
+.pluslink:hover .plusActive,
+.pluslink:hover .plusImage,
+.pluslink:hover .plusText {
+  opacity: 1;
+}

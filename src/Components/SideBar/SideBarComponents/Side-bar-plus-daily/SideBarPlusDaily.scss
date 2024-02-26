@@ -1,0 +1,21 @@
+.dailyDiv {
+  display: grid;
+  grid-template-columns: 100px 50px;
+  grid-template-rows: auto auto;
+}
+
+.dailyText {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  margin-bottom: 0;
+}
+
+.dailySVG {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  margin-left: 35px;
+  margin-bottom: 1px;
+  color: rgba(115, 115, 115, 0.91);
+}
