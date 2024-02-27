@@ -38,7 +38,7 @@ const FirstCard = () => {
                 </button>
                 <button className='fdCard'>
                     <div className='fdCardInside'>
-                        <h2>Футбольный матч "Зенит" - "Спартак"</h2>
+                        <h2>Футбольный матч «Зенит» - «Спартак»</h2>
                     </div>
                 </button>
                 <button className='ftCard'>
