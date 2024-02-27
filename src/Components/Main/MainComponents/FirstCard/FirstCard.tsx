@@ -24,6 +24,7 @@ const FirstCard = () => {
                 <h2 className='firstH'>Спортивный сезон в Плюсе</h2>
                 <p className='firstP'>Болейте за любимые команды</p>
             </div>
+            <br />
             <div className='CardSet' style={transformStyle}>
                 <button className='frCard'>
                     <div className='frCardInside'>

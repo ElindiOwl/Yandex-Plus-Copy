@@ -5,6 +5,15 @@
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
   position: relative;
   overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.card-text {
+  line-height: 1px;
+}
+
+.firstH {
+  font-size: 24px;
 }
 
 .CardSet {
@@ -51,7 +60,7 @@
   align-self: center;
   height: 100%;
   width: 100%;
-  background-image: url('src/assets/Images/GagarinCup.png');
+  background-image: url('src/assets/Images/FirstCardImages/GagarinCup.png');
   background-size: cover;
   background-position: center;
 }
@@ -62,7 +71,7 @@
   align-self: center;
   height: 100%;
   width: 100%;
-  background-image: url('src/assets/Images/PlayOff.png');
+  background-image: url('src/assets/Images/FirstCardImages/PlayOff.png');
   background-size: cover;
   background-position: center;
 }
@@ -73,7 +82,7 @@
   align-self: center;
   height: 100%;
   width: 100%;
-  background-image: url('src/assets/Images/ZenitSpartak.png');
+  background-image: url('src/assets/Images/FirstCardImages/ZenitSpartak.png');
   background-size: cover;
   background-position: center;
 }
@@ -84,7 +93,7 @@
   align-self: center;
   height: 100%;
   width: 100%;
-  background-image: url('src/assets/Images/SportTime.png');
+  background-image: url('src/assets/Images/FirstCardImages/SportTime.png');
   background-size: cover;
   background-position: center;
 }
