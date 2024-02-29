@@ -6,12 +6,12 @@ import SideBarPlusDaily from '../SideBarComponents/Side-bar-plus-daily/SideBarPl
 
 const SideBarApp = () => {
     return (
-        <>
+        <div className='SideBarDiv'>
             <SideBarActive />
             <SideBarPlusPoints />
             <SideBarCashBack />
             <SideBarPlusDaily />
-        </>
+        </div>
     );
 };
 

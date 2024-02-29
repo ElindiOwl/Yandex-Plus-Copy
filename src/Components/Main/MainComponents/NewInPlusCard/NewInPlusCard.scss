@@ -32,6 +32,10 @@
   grid-template-columns: auto;
   grid-template-rows: auto;
   padding: 16px;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(241, 243, 245);
 }
 
 .CardSetNewInPlus button:hover {
@@ -61,102 +65,6 @@
 .CardSetNewInPlus button div h3 {
   font-size: 20px;
   margin-bottom: 2px;
-}
-
-.firstCardNewInPlus {
-  grid-column: 1;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(241, 243, 245);
-  display: grid;
-  grid-template-columns: 120px 20px;
-  grid-template-rows: 120px;
-}
-
-.secondCardNewInPlus {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(241, 243, 245);
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-}
-
-.thirdCardNewInPlus {
-  grid-column: 3;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(241, 243, 245);
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-}
-
-.fourthCardNewInPlus {
-  grid-column: 4;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(241, 243, 245);
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-}
-
-.fifthCardNewInPlus {
-  grid-column: 5;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(241, 243, 245);
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-}
-
-.sixthCardNewInPlus {
-  grid-column: 6;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(241, 243, 245);
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-}
-
-.seventhCardNewInPlus {
-  grid-column: 7;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(241, 243, 245);
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
-}
-
-.eighthCardNewInPlus {
-  grid-column: 8;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  background-color: rgb(241, 243, 245);
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto;
 }
 
 .prevButtonNewInPlus {

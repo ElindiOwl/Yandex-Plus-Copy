@@ -33,6 +33,11 @@
   grid-template-rows: 15% 80%;
   grid-gap: 60%;
   padding: 20px;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .CardSet button:hover {
@@ -55,47 +60,19 @@
 }
 
 .frCard {
-  grid-column: 1;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
   background-image: url('src/assets/Images/FirstCardImages/GagarinCup.png');
-  background-size: cover;
-  background-position: center;
 }
 
 .scCard {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
   background-image: url('src/assets/Images/FirstCardImages/PlayOff.png');
-  background-size: cover;
-  background-position: center;
 }
 
 .fdCard {
-  grid-column: 3;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
   background-image: url('src/assets/Images/FirstCardImages/ZenitSpartak.png');
-  background-size: cover;
-  background-position: center;
 }
 
 .ftCard {
-  grid-column: 4;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
   background-image: url('src/assets/Images/FirstCardImages/SportTime.png');
-  background-size: cover;
-  background-position: center;
 }
 
 .prevButton {

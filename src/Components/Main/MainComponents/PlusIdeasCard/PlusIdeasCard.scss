@@ -33,6 +33,11 @@
   grid-template-rows: 15% 80%;
   grid-gap: 60%;
   padding: 20px;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
 }
 
 .CardSet button:hover {
@@ -41,47 +46,19 @@
 }
 
 .frCardIdea {
-  grid-column: 1;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  background-image: url('src/assets/Images/PlusIdeasCard/KillerInsightSeries.png');
-  background-size: cover;
-  background-position: center;
+  background-image: url('../../../../assets/Images/PlusIdeasCardImages/KillerInsightSeries.png');
 }
 
 .scCardIdea {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  background-image: url('src/assets/Images/PlusIdeasCard/OpenPayCard.png');
-  background-size: cover;
-  background-position: center;
+  background-image: url('../../../../assets/Images/PlusIdeasCardImages/OpenPayCard.png');
 }
 
 .fdCardIdea {
-  grid-column: 3;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  background-image: url('src/assets/Images/PlusIdeasCard/DailyGifts.png');
-  background-size: cover;
-  background-position: center;
+  background-image: url('../../../../assets/Images/PlusIdeasCardImages/DailyGifts.png');
 }
 
 .ftCardIdea {
-  grid-column: 4;
-  grid-row: 1;
-  align-self: center;
-  height: 100%;
-  width: 100%;
-  background-image: url('src/assets/Images/PlusIdeasCard/MyWave.png');
-  background-size: cover;
-  background-position: center;
+  background-image: url('../../../../assets/Images/PlusIdeasCardImages/MyWave.png');
 }
 
 .prevButton {

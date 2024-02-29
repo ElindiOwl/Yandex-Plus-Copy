@@ -1,0 +1,74 @@
+.KinoPoiskCardSection {
+  background-color: white;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 20px;
+}
+
+.card-textAbout h2 {
+  font-size: 24px;
+}
+
+.titleAbout {
+  margin-bottom: 0;
+}
+
+.infoAbout {
+  margin-top: 0;
+}
+
+.CardSet {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(13, 236px);
+  grid-template-rows: 354px;
+  grid-gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.CardSet button {
+  border: none;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 15% 80%;
+  grid-gap: 60%;
+  padding: 20px;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+.CardSet button:hover {
+  transform: scale(1.05);
+  transition: transform 0.1s ease-in-out;
+}
+
+.firstCardAbout {
+  background-image: url('./src/assets/Images/AboutCashBackCardImages/Market.png');
+}
+
+.secondCardAbout {
+  background-image: url('./src/assets/Images/AboutCashBackCardImages/Taxi.png');
+}
+
+.thirdCardAbout {
+  background-image: url('./src/assets/Images/AboutCashBackCardImages/Lavka.png');
+}
+
+.fourthCardAbout {
+  background-image: url('./src/assets/Images/AboutCashBackCardImages/Eats.png');
+}
+
+.fifthCardAbout {
+  background-image: url('./src/assets/Images/AboutCashBackCardImages/Travel.png');
+}
+
+.sixthCardAbout {
+  background-image: url('./src/assets/Images/AboutCashBackCardImages/MoreServices.png')
+}

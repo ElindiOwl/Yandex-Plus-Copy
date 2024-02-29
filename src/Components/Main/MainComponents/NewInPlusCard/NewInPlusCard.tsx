@@ -1,13 +1,13 @@
 import './NewInPlusCard.scss';
 import React, { useState } from 'react';
-import Planet from '../../../../assets/Images/NewInPlusCard/Planet.png';
-import Kognata from '../../../../assets/Images/NewInPlusCard/Kognata.png';
-import Oscar from '../../../../assets/Images/NewInPlusCard/Oscar.png';
-import LoveL from '../../../../assets/Images/NewInPlusCard/LoveLanguage.png';
-import Kvizes from '../../../../assets/Images/NewInPlusCard/Kvizes.png';
-import Final from '../../../../assets/Images/NewInPlusCard/FantasyFinal.png';
-import Daily from '../../../../assets/Images/NewInPlusCard/DailyDragon.png';
-import Kombinator from '../../../../assets/Images/NewInPlusCard/KombinatorGame.png';
+import Planet from '../../../../assets/Images/NewInPlusCardImages/Planet.png';
+import Kognata from '../../../../assets/Images/NewInPlusCardImages/Kognata.png';
+import Oscar from '../../../../assets/Images/NewInPlusCardImages/Oscar.png';
+import LoveL from '../../../../assets/Images/NewInPlusCardImages/LoveLanguage.png';
+import Kvizes from '../../../../assets/Images/NewInPlusCardImages/Kvizes.png';
+import Final from '../../../../assets/Images/NewInPlusCardImages/FantasyFinal.png';
+import Daily from '../../../../assets/Images/NewInPlusCardImages/DailyDragon.png';
+import Kombinator from '../../../../assets/Images/NewInPlusCardImages/KombinatorGame.png';
 
 const NewInPlusCard = () => {
 
