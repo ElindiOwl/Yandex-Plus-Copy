@@ -30,6 +30,10 @@ const HeaderMenu = () => {
         setOpen(!isOpen);
     };
 
+    const handleDropdownItemClick = (event) => {
+        event.stopPropagation();
+    };
+
     const handleAccordionClick = (event) => {
         event.stopPropagation();
     };
@@ -52,7 +56,7 @@ const HeaderMenu = () => {
                 align='end'
                 show={isOpen}
             >
-                <NavDropdown.Item href='/subControl'>{
+                <NavDropdown.Item href='/subControl' onClick={handleDropdownItemClick}>{
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3601332/25032996-f891-412d-8a16-afd878e1952e/orig'
                         alt='media'
@@ -61,7 +65,7 @@ const HeaderMenu = () => {
                 }
                     Управление подпиской</NavDropdown.Item>
                 <br />
-                <NavDropdown.Item href='/family'>{
+                <NavDropdown.Item href='/family' onClick={handleDropdownItemClick}>{
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3502168/0908f7d2-8827-4eab-adbb-1e48a07f1039/orig'
                         alt='media'
@@ -69,7 +73,7 @@ const HeaderMenu = () => {
                     />
                 }
                     Плюс для близких</NavDropdown.Item>
-                <NavDropdown.Item href='/sharing'>{
+                <NavDropdown.Item href='/sharing' onClick={handleDropdownItemClick}>{
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3601332/7abe6ef7-b9b8-444e-b781-221c97cd52b9/orig'
                         alt='media'
@@ -129,7 +133,7 @@ const HeaderMenu = () => {
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
-                <NavDropdown.Item href='/allOptions'>{
+                <NavDropdown.Item href='/allOptions' onClick={handleDropdownItemClick}> {
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3737142/e04ad338-c8fc-459d-bfe1-3d01c4c9f099/orig'
                         alt='media'
@@ -138,7 +142,7 @@ const HeaderMenu = () => {
                 }
                     Все опции Плюса</NavDropdown.Item>
                 <br />
-                <NavDropdown.Item href='/support'>{
+                <NavDropdown.Item href='/support' onClick={handleDropdownItemClick}>{
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3756502/bca8cc02-c7a5-494d-b3a1-609af2469577/orig'
                         alt='media'
@@ -146,7 +150,7 @@ const HeaderMenu = () => {
                     />
                 }
                     Поддержка</NavDropdown.Item>
-                <NavDropdown.Item href='/suggests'>{
+                <NavDropdown.Item href='/suggests' onClick={handleDropdownItemClick}>{
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3502168/a5d3df73-e8a2-4664-a24a-c14cb205f2d2/orig'
                         alt='media'
@@ -155,7 +159,7 @@ const HeaderMenu = () => {
                 }
                     Предложение по улучшению</NavDropdown.Item>
                 <br />
-                <NavDropdown.Item href='/promo'>{
+                <NavDropdown.Item href='/promo' onClick={handleDropdownItemClick}>{
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3756502/f4292471-f653-4ed9-883b-ebf4320d9382/orig'
                         alt='media'
