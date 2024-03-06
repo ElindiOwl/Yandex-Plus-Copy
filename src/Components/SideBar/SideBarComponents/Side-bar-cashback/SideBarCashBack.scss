@@ -1,5 +1,6 @@
 .plusBackgroundCashBack {
-  background-color: #766fc9;
+  background-image: url('./src/assets/Images/SideBarImages/Percentaged.png');
+  background-size: auto 100%;
   width: 170px;
   height: 102px;
   margin: 20px;
@@ -39,4 +40,26 @@
   color: white;
   font-size: 14px;
   margin-bottom: 0;
+}
+
+@media screen and (max-width: 800px) {
+  .plusBackgroundCashBack {
+    background-image: none;
+    background-color: #766fc9;
+    width: 100%;
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .activateDivText {
+    display: none;
+  }
+  .plusSVGCashBack {
+    grid-column: 1;
+    grid-row: 3;
+    margin-left: 5px;
+    margin-bottom: 0;
+    margin-top: 10px;
+  }
 }

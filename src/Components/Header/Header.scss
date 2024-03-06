@@ -2,35 +2,94 @@
   display: none !important;
 }
 
-.menu-word {
-  margin-left: auto;
-  margin-right: 5px;
-  cursor: pointer;
-  color: black;
-  margin-bottom: 5px;
-}
-
-.Accordion {
-  border: none;
+.HeaderDiv {
+  position: sticky;
+  top: 0;
   background-color: transparent;
-  color: black;
-  box-shadow: none;
-  --bs-accordion-border-color: none;
+  z-index: 1000;
+  transition: 0.1s;
+  display: flex;
+  justify-content: center;
 }
 
-.accordion {
-  --bs-accordion-border-color: transparent;
+.navbarDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1250px;
+  max-width: 1250px;
 }
 
-.accordion-button:not(.collapsed) {
-  color: black;
-  background-color: transparent;
-  box-shadow: none;
-  border: none;
+.blankDiv {
+  flex-grow: 1;
+  order: 2;
 }
 
-.accordion-button:focus {
-  z-index: 3;
-  outline: 0;
-  box-shadow: none;
+.headerMenu {
+  order: 3;
+  padding: 10px;
+}
+
+.headerPortrait {
+  order: 4;
+  padding: 10px;
+  padding-right: 17px;
+}
+
+.headerLogo {
+  order: 1;
+  padding-left: 37px;
+  padding-top: 10px;
+}
+
+.logoImage {
+  margin-top: 10px;
+  height: 27px;
+  width: 183px;
+}
+
+.scrolled {
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: 0.1s;
+}
+
+@media screen and (max-width: 1250px) {
+  .headerLogo {
+    padding-left: 25px;
+  }
+  .headerPortrait {
+    padding-right: 23px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .HeaderDiv {
+    background-color: white;
+  }
+  .headerLogo {
+    order: 2;
+    padding-left: 0;
+  }
+
+  .headerMenu {
+    order: 1;
+    padding: 10px;
+  }
+
+  .headerPortrait {
+    order: 3;
+    padding: 10px;
+    padding-right: 17px;
+  }
+
+  .blankDiv {
+    display: none;
+  }
+
+  .logoImage {
+    margin-top: 10px;
+    height: 24px;
+    width: 162px;
+  }
 }

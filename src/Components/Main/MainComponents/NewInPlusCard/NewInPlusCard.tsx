@@ -1,5 +1,5 @@
 import './NewInPlusCard.scss';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Planet from '../../../../assets/Images/NewInPlusCardImages/Planet.png';
 import Kognata from '../../../../assets/Images/NewInPlusCardImages/Kognata.png';
 import Oscar from '../../../../assets/Images/NewInPlusCardImages/Oscar.png';
@@ -10,19 +10,41 @@ import Daily from '../../../../assets/Images/NewInPlusCardImages/DailyDragon.png
 import Kombinator from '../../../../assets/Images/NewInPlusCardImages/KombinatorGame.png';
 
 const NewInPlusCard = () => {
-
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [transformValues, setTransformValues] = useState(['0%', '-50%', '-100%']);
+
+    useEffect(() => {
+        const updateTransformValues = () => {
+            const screenWidth = window.innerWidth;
+            const newTransformValues =
+                screenWidth >= 1250 ? ['0%', '-50%', '-99%', '-148%', '-197%', '-247%', '-296%']
+                    : screenWidth >= 1100 ? ['0%', '-55%', '-108%', '-161%', '-215%', '-268%', '-322%']
+                        : screenWidth >= 1000 ? ['0%', '-63%', '-124%', '-185%', '-246%', '-308%', '-369%', '-386%']
+                            : screenWidth >= 900 ? ['0%', '-75%', '-148%', '-221%', '-294%', '-367%', '-441%', '-481%']
+                                : ['0%', '-85%', '-170%', '-255%', '-339%', '-423%', '-508%', '-593%'];
+
+            setTransformValues(newTransformValues);
+        };
+
+        updateTransformValues();
+
+        window.addEventListener('resize', updateTransformValues);
+
+        return () => {
+            window.removeEventListener('resize', updateTransformValues);
+        };
+    }, []);
 
     const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === 6 ? 0 : prevIndex + 1));
+        setCurrentIndex((prevIndex) => (prevIndex === transformValues.length - 1 ? 0 : prevIndex + 1));
     };
 
     const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === 0 ? 6 : prevIndex - 1));
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? transformValues.length - 1 : prevIndex - 1));
     };
 
     const transformStyle = {
-        transform: `translateX(-${currentIndex * 50}%)`,
+        transform: `translateX(${transformValues[currentIndex]})`,
     };
 
     return (
@@ -114,7 +136,7 @@ const NewInPlusCard = () => {
                 </button>
             </div>
             {currentIndex !== 0 && (
-                <button className='prevButtonNewInPlus' onClick={prevSlide}>
+                <button className='prevButton' onClick={prevSlide}>
                     <svg viewBox='1 3 21 21' fill='none' xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
                         <path fillRule='evenodd' clipRule='evenodd'
                               d='M15.566 4.434a.8.8 0 0 1 0 1.13L9.13 12l6.435 6.434a.8.8 0 1 1-1.132 1.132l-7-7a.8.8 0 0 1 0-1.131l7-7a.8.8 0 0 1 1.132 0Z'
@@ -122,9 +144,8 @@ const NewInPlusCard = () => {
                     </svg>
                 </button>
             )}
-
-            {currentIndex !== 6 && (
-                <button className='nextButtonNewInPlus' onClick={nextSlide}>
+            {currentIndex !== transformValues.length - 1 && (
+                <button className='nextButton' onClick={nextSlide}>
                     <svg viewBox='1 3 21 21' fill='none' xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
                         <path fillRule='evenodd' clipRule='evenodd'
                               d='M8.434 4.434a.8.8 0 0 0 0 1.13L14.87 12l-6.435 6.434a.8.8 0 0 0 1.132 1.132l7-7a.8.8 0 0 0 0-1.131l-7-7a.8.8 0 0 0-1.132 0Z'

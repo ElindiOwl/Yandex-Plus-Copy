@@ -1,1 +1,39 @@
+.sideBarDiv {
+  padding: 0;
+  position: sticky;
+  top: 88px;
+  width: 200px;
+  max-height: 100%;
+  z-index: 900;
+  margin-right: 20px;
+}
 
+@media screen and (max-width: 1250px) {
+  .sideBarDiv {
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .sideBarDiv {
+    position: relative;
+    top: 0;
+    width: 100%;
+    min-width: 100%;
+    margin-right: 0;
+    padding-right: 20px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+  .sideBarDivForMobile {
+    display: flex;
+    align-items: baseline;
+    width: 102.5%;
+    height: 117px;
+    min-width: 100%;
+    margin-top: 20px;
+    padding-right: 0;
+    margin-right: 0;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+}

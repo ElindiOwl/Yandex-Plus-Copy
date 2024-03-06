@@ -1,9 +1,31 @@
 import './YandexMusicCard.scss';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const YandexMusicCard = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const transformValues = ['0%', '-17%'];
+    const [transformValues, setTransformValues] = useState(['0%', '-5%']);
+
+    useEffect(() => {
+        const updateTransformValues = () => {
+            const screenWidth = window.innerWidth;
+            const newTransformValues =
+                screenWidth >= 1250 ? ['0%', '-12%']
+                    : screenWidth >= 1100 ? ['0%', '-26%']
+                        : screenWidth >= 1000 ? ['0%', '-44%']
+                            : screenWidth >= 900 ? ['0%', '-66%']
+                                : ['0%', '-24%', '-68%'];
+
+            setTransformValues(newTransformValues);
+        };
+
+        updateTransformValues();
+
+        window.addEventListener('resize', updateTransformValues);
+
+        return () => {
+            window.removeEventListener('resize', updateTransformValues);
+        };
+    }, []);
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex === transformValues.length - 1 ? 0 : prevIndex + 1));

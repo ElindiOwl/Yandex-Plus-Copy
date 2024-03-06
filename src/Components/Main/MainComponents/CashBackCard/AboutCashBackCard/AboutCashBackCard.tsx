@@ -1,10 +1,32 @@
 import './AboutCashBackCard.scss';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import YandexImage from '../../../../../assets/Images/AboutCashBackCardImages/Yandex.svg';
 
 const AboutCashBackCard = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const transformValues = ['0%', '-64%'];
+    const [transformValues, setTransformValues] = useState(['0%', '-5%']);
+
+    useEffect(() => {
+        const updateTransformValues = () => {
+            const screenWidth = window.innerWidth;
+            const newTransformValues =
+                screenWidth >= 1250 ? ['0%', '-55%', '-59%']
+                    : screenWidth >= 1100 ? ['0%', '-62%', '-78%']
+                        : screenWidth >= 1000 ? ['0%', '-71%', '-105%']
+                            : screenWidth >= 900 ? ['0%', '-81%', '-133%']
+                                : ['0%', '-87%', '-150%'];
+
+            setTransformValues(newTransformValues);
+        };
+
+        updateTransformValues();
+
+        window.addEventListener('resize', updateTransformValues);
+
+        return () => {
+            window.removeEventListener('resize', updateTransformValues);
+        };
+    }, []);
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex === transformValues.length - 1 ? 0 : prevIndex + 1));
@@ -19,13 +41,13 @@ const AboutCashBackCard = () => {
     };
 
     return (
-        <section className='KinoPoiskCardSection'>
+        <section className='AboutCardSection'>
             <div className='card-textAbout'>
                 <h2 className='titleAbout'>Кешбэк баллами Плюса</h2>
                 <h2 className='infoAbout'>при оплате через <img src={YandexImage} alt='Yandex' /> Пэй</h2>
             </div>
             <br />
-            <div className='CardSet' style={transformStyle}>
+            <div className='CardSetAbout' style={transformStyle}>
                 <button className='firstCardAbout'></button>
                 <button className='secondCardAbout'></button>
                 <button className='thirdCardAbout'></button>

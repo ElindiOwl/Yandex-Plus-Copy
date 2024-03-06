@@ -1,18 +1,55 @@
-.Container {
-    display: grid;
-    grid-template-columns: 16% 83%;
-    grid-template-rows: 100% auto;
+.finalDiv {
+}
+
+.headerApp {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.containerApp {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
 }
 
 
-.Aside {
-    grid-column: 1;
-    grid-row: 2;
-    align-self: center;
+.asideApp {
+    margin-right: 20px;
 }
 
-.Main {
-    grid-column: 2;
-    grid-row: 2;
-    align-self: center;
+.footerFinalDiv {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: -140px;
+}
+
+@media screen and (max-width: 1250px) {
+    .footerFinalDiv {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        padding-left: 150px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .footerFinalDiv {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: -140px;
+        width: 500px;
+        overflow: auto;
+        overflow-wrap: break-word;
+    }
+
+    .asideApp {
+        margin-right: 0;
+    }
+
+    .containerApp {
+        display: initial;
+    }
 }

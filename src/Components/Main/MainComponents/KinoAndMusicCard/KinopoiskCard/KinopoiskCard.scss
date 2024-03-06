@@ -16,7 +16,7 @@
   font-size: 24px;
 }
 
-.CardSet {
+.CardSetKino {
   position: relative;
   display: grid;
   grid-template-columns: repeat(13, 236px);
@@ -25,7 +25,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.CardSet button {
+.CardSetKino button {
   border: none;
   border-radius: 15px;
   display: grid;
@@ -40,7 +40,7 @@
   background-position: center;
 }
 
-.CardSet button:hover {
+.CardSetKino button:hover {
   transform: scale(1.05);
   transition: transform 0.1s ease-in-out;
 }
@@ -95,4 +95,15 @@
 
 .thirteenthCardKino {
   background-image: url('./src/assets/Images/KinopoiskCardImages/Explainicals.png');
+}
+
+@media screen and (max-width: 800px) {
+  .KinoPoiskCardSection {
+    padding: 24px 24px 24px 15px;
+  }
+  .CardSetKino {
+    grid-template-columns: repeat(13, 156px);
+    grid-template-rows: 236px;
+    grid-gap: 10px;
+  }
 }

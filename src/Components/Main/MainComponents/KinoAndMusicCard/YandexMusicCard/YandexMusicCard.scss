@@ -56,3 +56,14 @@
 .fifthCardMusic {
   background-image: url('./src/assets/Images/YandexMusicCardImages/NewHits.png');
 }
+
+@media screen and (max-width: 800px) {
+  .yandexMusicCardSection {
+    padding: 24px 24px 24px 15px;
+  }
+  .CardSetMusic {
+    grid-template-columns: repeat(5, 160px);
+    grid-template-rows: 160px;
+    grid-gap: 10px;
+  }
+}

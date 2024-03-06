@@ -3,7 +3,7 @@ import './SideBarPlusPoints.scss';
 
 const SideBarPlusPoints = () => {
     return (
-        <div className='plusBackground'>
+        <div className='plusBackgroundPoints'>
             <a className='pluslink'
                href='/Points'>
                 <div className='plusInside'>

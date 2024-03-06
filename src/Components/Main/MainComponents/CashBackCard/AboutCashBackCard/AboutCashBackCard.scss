@@ -1,4 +1,4 @@
-.KinoPoiskCardSection {
+.AboutCardSection {
   background-color: white;
   padding: 24px;
   border-radius: 20px;
@@ -20,16 +20,16 @@
   margin-top: 0;
 }
 
-.CardSet {
+.CardSetAbout {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(13, 236px);
+  grid-template-columns: repeat(6, 236px);
   grid-template-rows: 354px;
   grid-gap: 20px;
   transition: transform 0.3s ease-in-out;
 }
 
-.CardSet button {
+.CardSetAbout button {
   border: none;
   border-radius: 15px;
   display: grid;
@@ -44,7 +44,7 @@
   background-position: center;
 }
 
-.CardSet button:hover {
+.CardSetAbout button:hover {
   transform: scale(1.05);
   transition: transform 0.1s ease-in-out;
 }
@@ -71,4 +71,15 @@
 
 .sixthCardAbout {
   background-image: url('./src/assets/Images/AboutCashBackCardImages/MoreServices.png')
+}
+
+@media screen and (max-width: 800px) {
+  .AboutCardSection {
+    padding: 24px 24px 24px 15px;
+  }
+  .CardSetAbout {
+    grid-template-columns: repeat(6, 156px);
+    grid-template-rows: 236px;
+    grid-gap: 10px;
+  }
 }

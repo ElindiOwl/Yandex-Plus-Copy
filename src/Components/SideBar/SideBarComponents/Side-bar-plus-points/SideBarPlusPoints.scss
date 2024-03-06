@@ -1,3 +1,13 @@
+.plusBackgroundPoints {
+  background-color: white;
+  width: 170px;
+  height: 103px;
+  margin: 20px;
+  margin-top: 5px;
+  border-radius: 20px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
 .pointsText {
   display: grid;
   grid-template-columns: auto auto;
@@ -46,4 +56,27 @@
 .pointsSVG {
   margin-left: 5px;
   margin-top: 29px;
+}
+
+@media screen and (max-width: 800px) {
+  .plusBackgroundPoints {
+    width: 50%;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 0;
+    margin-left: 0;
+    margin-top: 5px;
+  }
+  .plusSVGArrow {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+  .pointsText {
+    display: grid;
+    grid-template-columns: 94% 6%;
+    grid-template-rows: 22px 33px 27px;
+  }
 }

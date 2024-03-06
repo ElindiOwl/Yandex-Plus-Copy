@@ -100,3 +100,45 @@
   transform: scale(1.2);
   transition: transform 0.1s ease-in-out;
 }
+
+@media screen and (max-width: 800px) {
+  .newInPlusCardSection {
+    padding: 24px 24px 24px 15px;
+  }
+  .CardSetNewInPlus {
+    grid-template-columns: repeat(8, 320px);
+    grid-template-rows: 114px;
+    grid-gap: 10px;
+  }
+
+  .CardSetNewInPlus button {
+    padding: 0 16px 0 16px;
+  }
+
+  .CardSetNewInPlus button img {
+    grid-column: 1;
+    grid-row: 1;
+    align-self: center;
+    height: 80px;
+    width: 80px;
+    margin-right: 20px;
+  }
+
+  .CardSetNewInPlus button div {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    height: 60%;
+    width: 100%;
+    text-align: left;
+    line-height: 17px;
+  }
+
+  .CardSetNewInPlus button div h3 {
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  .CardSetNewInPlus button div p {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,50 @@
+.footerDiv {
+  padding: 24px;
+  margin-bottom: 54px;
+  max-width: 1250px;
+}
+
+.footerDiv p {
+  font-size: 13px;
+  margin: 0;
+}
+
+.footerDiv p a {
+  text-decoration: none;
+  color: black;
+}
+
+.footerDiv p a:hover {
+  color: gray;
+  transition: 0.3s;
+}
+
+
+.footerLinks a {
+  font-size: 13px;
+  text-decoration: none;
+  color: black;
+  padding-right: 20px;
+  font-weight: 550;
+}
+
+.footerLinks a:hover {
+  color: gray;
+  transition: 0.3s;
+}
+
+@media screen and (max-width: 800px) {
+  .footerDiv {
+    padding: 20px 0 5px 5px;
+    margin-bottom: 5px;
+    max-width: 1250px;
+  }
+  .footerLinks {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .footerLinks a {
+    white-space: nowrap;
+  }
+}

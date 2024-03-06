@@ -6,9 +6,11 @@ import SideBarPlusDaily from '../SideBarComponents/Side-bar-plus-daily/SideBarPl
 
 const SideBarApp = () => {
     return (
-        <div className='SideBarDiv'>
-            <SideBarActive />
-            <SideBarPlusPoints />
+        <div className='sideBarDiv'>
+            <div className='sideBarDivForMobile'>
+                <SideBarActive />
+                <SideBarPlusPoints />
+            </div>
             <SideBarCashBack />
             <SideBarPlusDaily />
         </div>

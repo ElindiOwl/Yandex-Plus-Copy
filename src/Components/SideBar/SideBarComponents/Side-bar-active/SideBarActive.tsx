@@ -3,7 +3,7 @@ import portrait from '../../../../assets/Icons/Island.png';
 
 const sideBarActive = () => {
     return (
-        <div className='plusBackground'>
+        <div className='plusBackgroundActive'>
             <a className='pluslink'
                href='/Subscription'>
                 <div className='plusInside'>

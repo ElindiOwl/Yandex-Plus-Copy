@@ -1,20 +1,42 @@
 import './PlusIdeasCard.scss';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const PlusIdeadCard = () => {
-
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [transformValues, setTransformValues] = useState(['0%', '-5%']);
+
+    useEffect(() => {
+        const updateTransformValues = () => {
+            const screenWidth = window.innerWidth;
+            const newTransformValues =
+                screenWidth >= 1200 ? ['0%', '-5%']
+                    : screenWidth >= 1100 ? ['0%', '-16%']
+                        : screenWidth >= 1000 ? ['0%', '-33%']
+                            : screenWidth >= 900 ? ['0%', '-55%', '-100%']
+                                : ['0%', '-21%'];
+
+            setTransformValues(newTransformValues);
+        };
+
+        updateTransformValues();
+
+        window.addEventListener('resize', updateTransformValues);
+
+        return () => {
+            window.removeEventListener('resize', updateTransformValues);
+        };
+    }, []);
 
     const nextSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === 1 ? 0 : prevIndex + 1));
+        setCurrentIndex((prevIndex) => (prevIndex === transformValues.length - 1 ? 0 : prevIndex + 1));
     };
 
     const prevSlide = () => {
-        setCurrentIndex((prevIndex) => (prevIndex === 0 ? 1 : prevIndex - 1));
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? transformValues.length - 1 : prevIndex - 1));
     };
 
     const transformStyle = {
-        transform: `translateX(-${currentIndex * 7}%)`,
+        transform: `translateX(${transformValues[currentIndex]})`,
     };
 
     return (
@@ -24,7 +46,7 @@ const PlusIdeadCard = () => {
                 <p className='firstP'>Собрали их для вас</p>
             </div>
             <br />
-            <div className='CardSet' style={transformStyle}>
+            <div className='CardSetIdea' style={transformStyle}>
                 <button className='frCardIdea'>
                 </button>
                 <button className='scCardIdea'>
@@ -34,7 +56,7 @@ const PlusIdeadCard = () => {
                 <button className='ftCardIdea'>
                 </button>
             </div>
-            {currentIndex === 1 && (
+            {currentIndex !== 0 && (
                 <button className='prevButton' onClick={prevSlide}>
                     <svg viewBox='1 3 21 21' fill='none' xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
                         <path fillRule='evenodd' clipRule='evenodd'
@@ -43,7 +65,7 @@ const PlusIdeadCard = () => {
                     </svg>
                 </button>
             )}
-            {currentIndex === 0 && (
+            {currentIndex !== transformValues.length - 1 && (
                 <button className='nextButton' onClick={nextSlide}>
                     <svg viewBox='1 3 21 21' fill='none' xmlns='http://www.w3.org/2000/svg' width='20' height='20'>
                         <path fillRule='evenodd' clipRule='evenodd'

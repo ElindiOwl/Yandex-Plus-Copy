@@ -1,9 +1,31 @@
 import './KinopoiskCard.scss';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const KinopoiskCard = () => {
     const [currentIndex, setCurrentIndex] = useState(0);
-    const transformValues = ['0%', '-84%', '-167%', '-249%', '-255%'];
+    const [transformValues, setTransformValues] = useState(['0%', '-50%', '-100%']);
+
+    useEffect(() => {
+        const updateTransformValues = () => {
+            const screenWidth = window.innerWidth;
+            const newTransformValues =
+                screenWidth >= 1250 ? ['0%', '-82%', '-190%', '-243%', '-247%']
+                    : screenWidth >= 1100 ? ['0%', '-95%', '-220%', '-282%', '-302%']
+                        : screenWidth >= 1000 ? ['0%', '-110%', '-254%', '-326%', '-364%']
+                            : screenWidth >= 900 ? ['0%', '-120%', '-279%', '-358%', '-410%']
+                                : ['0%', '-87%', '-172%', '-257%', '-341%', '-426%', '-446%'];
+
+            setTransformValues(newTransformValues);
+        };
+
+        updateTransformValues();
+
+        window.addEventListener('resize', updateTransformValues);
+
+        return () => {
+            window.removeEventListener('resize', updateTransformValues);
+        };
+    }, []);
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) => (prevIndex === transformValues.length - 1 ? 0 : prevIndex + 1));
@@ -23,7 +45,7 @@ const KinopoiskCard = () => {
                 <h2 className='firstH'>Смотрите на Кинопоиске</h2>
             </div>
             <br />
-            <div className='CardSet' style={transformStyle}>
+            <div className='CardSetKino' style={transformStyle}>
                 <button className='firstCardKino'></button>
                 <button className='secondCardKino'></button>
                 <button className='thirdCardKino'></button>

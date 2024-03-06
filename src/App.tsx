@@ -1,17 +1,21 @@
 import './App.css';
 import Header from './Components/Header/Header';
 import Main from './Components/Main/Main';
-import Aside from './Components/SideBar/Aside';
+import Footer from './Components/Footer/Footer';
+import SideBarApp from './Components/SideBar/Side-bar-app/SideBarApp';
 
 
 function App() {
 
     return (
-        <div>
-            <Header className='Header' />
-            <div className='Container'>
-                <Aside className='Aside' />
-                <Main className='Main' />
+        <div className='finalDiv'>
+            <Header className='headerApp' />
+            <div className='containerApp'>
+                <SideBarApp className='asideApp' />
+                <Main className='mainApp' />
+            </div>
+            <div className='footerFinalDiv'>
+                <Footer className='footerApp' />
             </div>
         </div>
     );
