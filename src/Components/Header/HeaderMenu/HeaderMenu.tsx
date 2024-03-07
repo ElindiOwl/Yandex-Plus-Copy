@@ -1,51 +1,16 @@
-import { useEffect, useRef, useState } from 'react';
 import './HeaderMenu.scss';
 import { Squash as Hamburger } from 'hamburger-react';
 import { NavDropdown, Accordion } from 'react-bootstrap';
 
 const HeaderMenu = () => {
-    const [isOpen, setOpen] = useState(false);
-    const menuRef = useRef(null);
-    const accordionRef = useRef(null);
-
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (
-                menuRef.current &&
-                !menuRef.current.contains(event.target) &&
-                accordionRef.current &&
-                !accordionRef.current.contains(event.target)
-            ) {
-                setOpen(false);
-            }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
-
-    const handleMenuClick = () => {
-        setOpen(!isOpen);
-    };
-
-    const handleDropdownItemClick = (event) => {
-        event.stopPropagation();
-    };
-
-    const handleAccordionClick = (event) => {
-        event.stopPropagation();
-    };
 
     return (
         <div className='headerMenuDiv'>
             <NavDropdown
                 title={
-                    <div className='d-flex align-items-center' onClick={handleMenuClick}>
-                        <Hamburger size={20} toggled={isOpen} toggle={setOpen} />
+                    <div className='d-flex align-items-center'>
+                        <Hamburger size={20} />
                         <h5
-                            ref={menuRef}
                             className='menu-word'
                         >
                             Меню
@@ -54,9 +19,8 @@ const HeaderMenu = () => {
                 }
                 id='dropdown-menu-align-end'
                 align='end'
-                show={isOpen}
             >
-                <NavDropdown.Item href='/subControl' onClick={handleDropdownItemClick}>{
+                <NavDropdown.Item href='/subControl'>{
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3601332/25032996-f891-412d-8a16-afd878e1952e/orig'
                         alt='media'
@@ -65,7 +29,7 @@ const HeaderMenu = () => {
                 }
                     Управление подпиской</NavDropdown.Item>
                 <br />
-                <NavDropdown.Item href='/family' onClick={handleDropdownItemClick}>{
+                <NavDropdown.Item href='/family'>{
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3502168/0908f7d2-8827-4eab-adbb-1e48a07f1039/orig'
                         alt='media'
@@ -73,7 +37,7 @@ const HeaderMenu = () => {
                     />
                 }
                     Плюс для близких</NavDropdown.Item>
-                <NavDropdown.Item href='/sharing' onClick={handleDropdownItemClick}>{
+                <NavDropdown.Item href='/sharing'>{
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3601332/7abe6ef7-b9b8-444e-b781-221c97cd52b9/orig'
                         alt='media'
@@ -82,7 +46,7 @@ const HeaderMenu = () => {
                 }
                     Подарить Плюс</NavDropdown.Item>
                 <br />
-                <Accordion ref={accordionRef} onClick={handleAccordionClick} className='Accordion'>
+                <Accordion className='Accordion'>
                     <Accordion.Item eventKey='0'>
                         <Accordion.Header>{
                             <img
@@ -133,7 +97,7 @@ const HeaderMenu = () => {
                         </Accordion.Body>
                     </Accordion.Item>
                 </Accordion>
-                <NavDropdown.Item href='/allOptions' onClick={handleDropdownItemClick}> {
+                <NavDropdown.Item href='/allOptions'> {
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3737142/e04ad338-c8fc-459d-bfe1-3d01c4c9f099/orig'
                         alt='media'
@@ -142,7 +106,7 @@ const HeaderMenu = () => {
                 }
                     Все опции Плюса</NavDropdown.Item>
                 <br />
-                <NavDropdown.Item href='/support' onClick={handleDropdownItemClick}>{
+                <NavDropdown.Item href='/support'>{
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3756502/bca8cc02-c7a5-494d-b3a1-609af2469577/orig'
                         alt='media'
@@ -150,7 +114,7 @@ const HeaderMenu = () => {
                     />
                 }
                     Поддержка</NavDropdown.Item>
-                <NavDropdown.Item href='/suggests' onClick={handleDropdownItemClick}>{
+                <NavDropdown.Item href='/suggests'>{
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3502168/a5d3df73-e8a2-4664-a24a-c14cb205f2d2/orig'
                         alt='media'
@@ -159,7 +123,7 @@ const HeaderMenu = () => {
                 }
                     Предложение по улучшению</NavDropdown.Item>
                 <br />
-                <NavDropdown.Item href='/promo' onClick={handleDropdownItemClick}>{
+                <NavDropdown.Item href='/promo'>{
                     <img
                         src='https://avatars.mds.yandex.net/get-media-infra/3756502/f4292471-f653-4ed9-883b-ebf4320d9382/orig'
                         alt='media'

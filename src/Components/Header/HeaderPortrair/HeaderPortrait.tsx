@@ -1,37 +1,14 @@
 import './HeaderPortrait.scss';
 import portrait from '../../../assets/Icons/Island.png';
 import { NavDropdown } from 'react-bootstrap';
-import { useState, useEffect, useRef } from 'react';
 
 const HeaderPortrait = () => {
-    const [showDropdown, setShowDropdown] = useState(false);
-    const dropdownRef = useRef(null);
-
-    const handleCloseDropdown = () => {
-        setShowDropdown(false);
-    };
-
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
-                setShowDropdown(false);
-            }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside);
-
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
 
     return (
-        <div className='headerPortraitDiv' ref={dropdownRef}>
+        <div className='headerPortraitDiv'>
             <NavDropdown title={<img src={portrait} height='100%' width='45' alt='Portrait' />}
                          id='dropdown-menu-align-end'
                          align='end'
-                         show={showDropdown}
-                         onClick={() => setShowDropdown(!showDropdown)}
             >
                 <div>
                     <div className='Header'>
@@ -52,7 +29,7 @@ const HeaderPortrait = () => {
                                 </a>
                             </div>
                             <div className='exitButton'>
-                                <button type='button' onClick={handleCloseDropdown}>
+                                <button type='button'>
                                     <svg width='24' height='24' viewBox='0 0 24 24' fill='none'
                                          focusable='false' aria-hidden='true' className='SvgIcon'>
                                         <path fillRule='evenodd' clipRule='evenodd'

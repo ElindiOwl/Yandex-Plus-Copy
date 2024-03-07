@@ -1,13 +1,7 @@
 import './QuestionsCard.scss';
-import { useRef } from 'react';
 import { Accordion } from 'react-bootstrap';
 
 const QuestionsCard = () => {
-    const accordionRef = useRef(null);
-
-    const handleAccordionClick = (event) => {
-        event.stopPropagation();
-    };
 
     return (
         <div className='questionsCardDiv'>
@@ -16,7 +10,7 @@ const QuestionsCard = () => {
                 <h2 className='h2Questions'>Сейчас ответим</h2>
             </div>
             <div>
-                <Accordion ref={accordionRef} onClick={handleAccordionClick} className='accordionQuestions'>
+                <Accordion className='accordionQuestions'>
                     <Accordion.Item eventKey='0'>
                         <Accordion.Header>
                             Что входит в мою подписку Яндекс Плюс?

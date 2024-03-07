@@ -1,6 +1,11 @@
 import './SideBarCashBackModal.scss';
+import React from 'react';
 
-const SideBarCashBackModal = ({ onClose }) => {
+interface SideBarCashBackModalProps {
+    onClose: () => void;
+}
+
+const SideBarCashBackModal: React.FC<SideBarCashBackModalProps> = ({ onClose }) => {
 
     return (
         <>
