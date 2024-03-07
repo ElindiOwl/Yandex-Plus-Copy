@@ -28,10 +28,10 @@ function Header() {
 
                 </div>
                 <div className='headerMenu'>
-                    <HeaderMenu className='headerMenuinHeader' />
+                    <HeaderMenu />
                 </div>
                 <div className='headerPortrait'>
-                    <HeaderPortrait className='headerPortraitinHeader' />
+                    <HeaderPortrait />
                 </div>
             </div>
         </div>

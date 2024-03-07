@@ -9,13 +9,13 @@ function App() {
 
     return (
         <div className='finalDiv'>
-            <Header className='headerApp' />
+            <Header />
             <div className='containerApp'>
-                <SideBarApp className='asideApp' />
-                <Main className='mainApp' />
+                <SideBarApp />
+                <Main />
             </div>
             <div className='footerFinalDiv'>
-                <Footer className='footerApp' />
+                <Footer />
             </div>
         </div>
     );
