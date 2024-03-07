@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './HeaderMenu.scss';
 import { Squash as Hamburger } from 'hamburger-react';
 import { NavDropdown, Accordion } from 'react-bootstrap';

@@ -1,5 +1,5 @@
 import './AboutCashBackCard.scss';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import YandexImage from '../../../../../assets/Images/AboutCashBackCardImages/Yandex.svg';
 
 const AboutCashBackCard = () => {

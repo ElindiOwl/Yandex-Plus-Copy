@@ -1,5 +1,5 @@
 import './PlusIdeasCard.scss';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const PlusIdeadCard = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

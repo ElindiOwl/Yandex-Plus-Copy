@@ -1,7 +1,7 @@
 import './HeaderPortrait.scss';
 import portrait from '../../../assets/Icons/Island.png';
 import { NavDropdown } from 'react-bootstrap';
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 const HeaderPortrait = () => {
     const [showDropdown, setShowDropdown] = useState(false);

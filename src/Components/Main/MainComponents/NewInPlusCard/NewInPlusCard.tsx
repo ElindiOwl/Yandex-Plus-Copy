@@ -1,5 +1,5 @@
 import './NewInPlusCard.scss';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import Planet from '../../../../assets/Images/NewInPlusCardImages/Planet.png';
 import Kognata from '../../../../assets/Images/NewInPlusCardImages/Kognata.png';
 import Oscar from '../../../../assets/Images/NewInPlusCardImages/Oscar.png';

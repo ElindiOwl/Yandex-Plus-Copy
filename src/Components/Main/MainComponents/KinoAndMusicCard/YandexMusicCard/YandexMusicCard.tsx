@@ -1,5 +1,5 @@
 import './YandexMusicCard.scss';
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const YandexMusicCard = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

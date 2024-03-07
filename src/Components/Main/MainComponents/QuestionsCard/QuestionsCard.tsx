@@ -1,5 +1,5 @@
 import './QuestionsCard.scss';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import { Accordion } from 'react-bootstrap';
 
 const QuestionsCard = () => {

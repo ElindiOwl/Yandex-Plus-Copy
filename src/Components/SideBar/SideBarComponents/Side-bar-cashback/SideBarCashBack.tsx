@@ -1,5 +1,5 @@
 import './SideBarCashBack.scss';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../Side-bar-cashback/SideBarCashBackModal/SideBarCashBackModal.scss';
 import SideBarCashBackModal from './SideBarCashBackModal/SideBarCashBackModal';
 
