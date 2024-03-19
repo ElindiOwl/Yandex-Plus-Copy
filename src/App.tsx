@@ -1,22 +1,19 @@
 import './App.css';
-import Header from './Components/Header/Header';
-import Main from './Components/Main/Main';
-import Footer from './Components/Footer/Footer';
-import SideBarApp from './Components/SideBar/Side-bar-app/SideBarApp';
+import { Route, Routes } from 'react-router';
+import MainPage from './Pages/MainPage/MainPage';
+import SubscriptionControlPage from './Pages/SubscriptionControlPage/SubscriptionControlPage';
+import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
 
 
 function App() {
 
     return (
-        <div className='finalDiv'>
-            <Header />
-            <div className='containerApp'>
-                <SideBarApp />
-                <Main />
-            </div>
-            <div className='footerFinalDiv'>
-                <Footer />
-            </div>
+        <div id='app'>
+            <Routes>
+                <Route path='/' element={<MainPage />} />
+                <Route path='/subControl' element={<SubscriptionControlPage />} />
+                <Route path='*' element={<NotFoundPage />} />
+            </Routes>
         </div>
     );
 }

@@ -1,0 +1,92 @@
+.dropdown-toggle::after {
+  display: none !important;
+}
+
+.HeaderDivSubControl {
+  position: relative;
+  top: 0;
+  background-color: transparent;
+  z-index: 700;
+  transition: 0.1s;
+  display: flex;
+  justify-content: center;
+}
+
+.navbarDivSubControl {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1250px;
+  max-width: 1250px;
+}
+
+.blankDivSubControl {
+  flex-grow: 1;
+  order: 2;
+}
+
+.headerMenuSubControl {
+  order: 3;
+  padding: 10px;
+}
+
+.headerPortraitSubControl {
+  order: 4;
+  padding: 10px;
+  padding-right: 17px;
+}
+
+.headerLogoSubControl {
+  order: 1;
+  padding-left: 37px;
+  padding-top: 10px;
+}
+
+.logoImageSubControl {
+  margin-top: 10px;
+  height: 27px;
+  width: 183px;
+}
+
+.dropdown-menu {
+  --bs-dropdown-link-active-bg: black;
+  --bs-dropdown-link-active-color: black;
+}
+
+@media screen and (max-width: 1250px) {
+  .headerLogoSubControl {
+    padding-left: 25px;
+  }
+  .headerPortraitSubControl {
+    padding-right: 23px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .headerLogoSubControl {
+    order: 2;
+    padding-left: 0;
+  }
+
+  .headerMenuSubControl {
+    order: 1;
+    padding: 10px;
+  }
+
+  .headerPortraitSubControl {
+    order: 3;
+    padding: 10px;
+    padding-right: 17px;
+  }
+
+  .blankDivSubControl {
+    display: none;
+  }
+
+  .logoImageSubControl {
+    margin-top: 10px;
+    height: 24px;
+    width: 162px;
+  }
+}
+

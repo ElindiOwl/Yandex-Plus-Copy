@@ -1,0 +1,93 @@
+.questionsCardDiv {
+  background-color: white;
+  border-radius: 20px;
+  padding: 60px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+.accordionQuestions a {
+  color: black;
+}
+
+.accordionQuestions a:hover {
+  color: gray;
+  transition: 0.3s;
+}
+
+.textDiv {
+  padding-bottom: 10px;
+}
+
+.h2Questions {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  padding: 0;
+  line-height: 35px;
+}
+
+.accordionQuestions {
+  padding-inline: 60px;
+}
+
+.accordionQuestions .accordion {
+  --bs-accordion-border-color: transparent;
+}
+
+.accordionQuestions .accordion-body {
+  padding-left: 0;
+  padding-top: 5px;
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.accordionQuestions .accordion-item {
+  padding-left: 0;
+  border: none;
+}
+
+.accordionQuestions .accordion-button {
+  padding-left: 0;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.accordionQuestions .accordion-button:hover {
+  color: #dc0000;
+}
+
+.accordionQuestions .accordion-button:not(.collapsed) {
+  padding-bottom: 0;
+  color: black;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+.accordionQuestions .accordion-button:focus {
+  z-index: 3;
+  outline: 0;
+  box-shadow: none;
+}
+
+.accordionQuestions .accordion-item:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+
+@media screen and (max-width: 800px) {
+  .questionsCardDiv {
+    padding: 20px;
+  }
+  .accordionQuestions {
+    padding-inline: 0;
+  }
+  .textDiv {
+    display: flex;
+    justify-content: center;
+  }
+  .textDiv h2 {
+    font-size: 30px;
+  }
+}

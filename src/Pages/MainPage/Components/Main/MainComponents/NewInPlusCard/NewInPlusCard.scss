@@ -1,0 +1,147 @@
+.newInPlusCardSection {
+  background-color: white;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.card-text {
+  line-height: 1px;
+}
+
+.firstH {
+  font-size: 24px;
+}
+
+.CardSetNewInPlus {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(8, 448px);
+  grid-template-rows: 152px;
+  grid-gap: 20px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.CardSetNewInPlus button {
+  border: none;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  padding: 16px;
+  align-self: center;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(241, 243, 245);
+}
+
+.CardSetNewInPlus button:hover {
+  transform: scale(1.05);
+  transition: transform 0.1s ease-in-out;
+}
+
+.CardSetNewInPlus button img {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+  height: 120px;
+  width: 120px;
+  margin-right: 20px;
+}
+
+.CardSetNewInPlus button div {
+  grid-column: 2;
+  grid-row: 1;
+  align-self: center;
+  height: 60%;
+  width: 100%;
+  text-align: left;
+  line-height: 17px;
+}
+
+.CardSetNewInPlus button div h3 {
+  font-size: 20px;
+  margin-bottom: 2px;
+  color: black;
+}
+
+.CardSetNewInPlus button div p {
+  color: black;
+}
+
+.prevButtonNewInPlus {
+  position: absolute;
+  top: 55%;
+  background: white;
+  border: none;
+  cursor: pointer;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.nextButtonNewInPlus {
+  position: absolute;
+  top: 55%;
+  background: white;
+  border: none;
+  cursor: pointer;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.prevButtonNewInPlus:hover {
+  transform: scale(1.2);
+  transition: transform 0.1s ease-in-out;
+}
+
+.nextButtonNewInPlus:hover {
+  transform: scale(1.2);
+  transition: transform 0.1s ease-in-out;
+}
+
+@media screen and (max-width: 800px) {
+  .newInPlusCardSection {
+    padding: 24px 24px 24px 15px;
+  }
+  .CardSetNewInPlus {
+    display: grid;
+    grid-template-columns: repeat(8, 320px);
+    grid-template-rows: 114px;
+    grid-gap: 10px;
+  }
+
+  .CardSetNewInPlus button {
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+  }
+
+  .CardSetNewInPlus button img {
+    height: 80px;
+    width: 80px;
+    margin-right: 20px;
+  }
+
+  .CardSetNewInPlus button div {
+    flex: 1;
+    text-align: left;
+    line-height: 17px;
+  }
+
+  .CardSetNewInPlus button div h3 {
+    font-size: 14px;
+    margin-bottom: 2px;
+    color: black;
+  }
+  .CardSetNewInPlus button div p {
+    font-size: 13px;
+    color: black;
+  }
+}

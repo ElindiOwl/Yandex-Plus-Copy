@@ -1,0 +1,172 @@
+.changePlanSubPayment {
+  background-color: white;
+  border-radius: 20px;
+  padding: 16px;
+  margin-top: 8px;
+}
+
+.oneMonthPlanSubPayment {
+  background-color: #f5f7fa;
+  padding: 16px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 50px 95px 43px;
+  grid-template-rows: 23px 14px;
+}
+
+.oneMonthPlanSubPayment img {
+  grid-column: 1;
+}
+
+.oneMonthPlanSubPayment h6 {
+  grid-column: 2;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.oneMonthPlanSubPayment h5 {
+  grid-column: 2;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(109, 111, 120);
+}
+
+.oneMonthPlanSubPayment div {
+  grid-column: 3;
+  grid-row: 1;
+  margin-top: 3px;
+}
+
+.oneMonthPlanSubPayment div p {
+  font-size: 10px;
+  color: rgb(37, 84, 248);
+  background-color: #dfe1f9;
+  padding: 0 3px 0 3px;
+  border-radius: 5px;
+}
+
+.oneYearPlanSubPayment {
+  margin-top: 8px;
+  background-color: #f5f7fa;
+  padding: 16px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 50px 185px 40px 125px 138px;
+  grid-template-rows: 23px 14px;
+}
+
+.oneYearPlanSubPayment img {
+  grid-column: 1;
+}
+
+.oneYearPlanSubPayment h6 {
+  grid-column: 2;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.oneYearPlanSubPayment h5 {
+  grid-column: 2;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(109, 111, 120);
+}
+
+.oneYearPlanSubPayment div {
+  grid-column: 3;
+  grid-row: 1;
+  margin-bottom: 7px;
+}
+
+.oneYearPlanSubPayment div p {
+  font-size: 14px;
+  color: rgb(255, 255, 255);
+  background-color: #fa9214;
+  padding: 0 3px 0 3px;
+  border-radius: 5px;
+}
+
+.blankDivChangePlanSubPayment {
+  grid-column: 4;
+}
+
+.oneYearPlanSubPaymentButton {
+  grid-column: 5;
+  grid-row: 1;
+  height: 38px;
+  margin-top: 0;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(63, 104, 249);
+  padding: 7px 40px 7px 40px;
+  font-size: 15px;
+  font-weight: 450;
+}
+
+.oneYearPlanSubPaymentButton:hover {
+  background-color: rgb(39, 85, 248);
+}
+
+.oneYearPlanSubPaymentButton:active {
+  background-color: rgb(13, 64, 247);
+}
+
+.enhancedOneMonthPlanSubPayment {
+  margin-top: 8px;
+  background-color: #f5f7fa;
+  padding: 16px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: 50px 185px 40px 125px 138px;
+  grid-template-rows: 23px 14px;
+}
+
+.enhancedOneMonthPlanSubPayment img {
+  grid-column: 1;
+}
+
+.enhancedOneMonthPlanSubPayment h6 {
+  grid-column: 2;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.enhancedOneMonthPlanSubPayment h5 {
+  grid-column: 2;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(109, 111, 120);
+}
+
+.enhancedOneMonthPlanSubPayment div {
+  grid-column: 3;
+  grid-row: 1;
+  margin-bottom: 7px;
+}
+
+.blankDivChangePlanSubPayment {
+  grid-column: 4;
+}
+
+.enhancedOneMonthPlanSubPaymentButton {
+  grid-column: 5;
+  grid-row: 1;
+  height: 38px;
+  margin-top: 0;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(63, 104, 249);
+  padding: 7px 40px 7px 40px;
+  font-size: 15px;
+  font-weight: 450;
+}
+
+.enhancedOneMonthPlanSubPaymentButton:hover {
+  background-color: rgb(39, 85, 248);
+}
+
+.enhancedOneMonthPlanSubPaymentButton:active {
+  background-color: rgb(13, 64, 247);
+}

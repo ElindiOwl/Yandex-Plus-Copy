@@ -1,0 +1,172 @@
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.modalCashBack, .overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(10, 10, 10, 0.8);
+}
+
+.modalContentSideBarCashBack {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 1.4;
+  background: #f1f1f1;
+  padding: 14px 28px;
+  margin-top: 100px;
+  max-width: 488px;
+  min-width: 300px;
+  height: 880px;
+  border-radius: 20px;
+  background: linear-gradient(to bottom, #d2cfe3 5%, #e2def4 95%);
+  display: grid;
+  grid-template-rows: 45% 40% 10%;
+  grid-template-columns: 428px auto;
+}
+
+.modalContentTextSideBarCashBack {
+  grid-row: 1;
+  margin-top: 40px;
+}
+
+.modalContentTextSideBarCashBack h2 {
+  font-size: 24px;
+}
+
+.modalContentTextSideBarCashBack p {
+  font-size: 16px;
+  line-height: 17px;
+}
+
+.modalContentTextSideBarCashBack a {
+  color: #525252;
+}
+
+.modalContentTextSideBarCashBack a:hover {
+  color: black;
+}
+
+.blankForBgImage {
+  grid-row: 2;
+  background-image: url('../../../../assets/Images/SideBarImages/ModalImg.png');
+  background-size: 100% 100%;
+  width: 370px;
+  height: 370px;
+  margin-left: 30px;
+}
+
+.modalContentBottomButtonSideBarCashBack {
+  grid-row: 3;
+  margin-top: 60px;
+  width: 429px;
+  height: 60px;
+  border-color: transparent;
+  background: rgb(46, 47, 51);
+  color: white;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.close-modal {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  padding: 5px 7px;
+  border-radius: 50px;
+  border-color: transparent;
+  width: 24px;
+  height: 24px;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 800px) {
+  .modalContentSideBarCashBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 39.5%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .blankForBgImage {
+    grid-row: 2;
+    background-image: url('../../../../assets/Images/SideBarImages/ModalImg.png');
+    background-size: 100% 100%;
+    width: 370px;
+    height: 370px;
+    margin-left: 0;
+  }
+  .modalContentBottomButtonSideBarCashBack {
+    grid-row: 3;
+    margin-top: 60px;
+    width: 100%;
+    height: 60px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .modalContentSideBarCashBack {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 36.5%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    display: grid;
+    grid-template-columns: 100%;
+  }
+  .modalContentTextSideBarCashBack {
+    z-index: 200;
+  }
+
+  .modalContentTextSideBarCashBack h2 {
+    font-size: 22px;
+  }
+
+  .modalContentTextSideBarCashBack p {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .blankForBgImage {
+    grid-row: 2;
+    background-image: url('../../../../assets/Images/SideBarImages/ModalImg.png');
+    background-size: cover;
+    width: 270px;
+    height: 270px;
+    margin-left: 30px;
+    margin-top: 20px;
+    z-index: 100;
+  }
+  .modalContentBottomButtonSideBarCashBack {
+    grid-row: 3;
+    margin-top: 60px;
+    width: 100%;
+    height: 60px;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
