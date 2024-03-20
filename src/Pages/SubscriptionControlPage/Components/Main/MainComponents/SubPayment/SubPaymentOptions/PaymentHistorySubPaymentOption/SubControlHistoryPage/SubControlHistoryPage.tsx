@@ -1,7 +1,7 @@
 import './SubControlHistoryPage.scss';
 import Header from '../../../../../../../../../Shared/Header/Header';
 import Footer from '../../../../../../../../../Shared/Footer/Footer';
-import PaymentsHistoryMap from './PaymentsHistoryMap';
+import PaymentsHistoryMap from './PaymentHistoryMap/PaymentsHistoryMap';
 
 const SubControlHistoryPage = () => {
     const goBack = () => {

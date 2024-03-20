@@ -1,5 +1,5 @@
 import './PaymentHistorySubPaymentOption.scss';
-import PaymentsHistoryMap from './SubControlHistoryPage/PaymentsHistoryMap';
+import PaymentsHistoryMap from './SubControlHistoryPage/PaymentHistoryMap/PaymentsHistoryMap';
 
 const PaymentHistoryPaymentOption = () => {
 
