@@ -1,5 +1,5 @@
 import './HeaderPortrait.scss';
-import portrait from '../../assets/Icons/Island.png';
+import portrait from '../Icons/Island.png';
 import { useEffect, useRef, useState } from 'react';
 
 

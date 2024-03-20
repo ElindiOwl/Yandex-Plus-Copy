@@ -44,11 +44,10 @@
 
 .subPaymentOption {
   opacity: 0;
-  height: 0;
-  transition: all 0.7s ease;
+  transition: all 0.7s ease-in;
 }
 
 .subPaymentOption.active {
   opacity: 1;
-  height: 255px;
+  transition: all 0.7s ease-out;
 }

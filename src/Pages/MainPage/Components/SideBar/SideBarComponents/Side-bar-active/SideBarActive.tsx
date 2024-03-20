@@ -1,5 +1,5 @@
 import './SideBarActive.scss';
-import portrait from '../../../assets/Icons/Island.png';
+import portrait from '../../../../../../Shared/Header/Icons/Island.png';
 
 const sideBarActive = () => {
     return (

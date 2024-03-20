@@ -1,5 +1,5 @@
-import Footer from './Shared/Footer/Footer';
-import Header from './Components/Header/Header';
+import Footer from '../../Shared/Footer/Footer';
+import Header from '../../Shared/Header/Header';
 import Main from './Components/Main/Main';
 
 
@@ -7,7 +7,7 @@ function SubscriptionControlPage() {
 
     return (
         <>
-            <Header />
+            <Header isScrollableStyle={false} />
             <Main />
             <Footer />
         </>

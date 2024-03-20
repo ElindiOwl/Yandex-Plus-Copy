@@ -1,7 +1,7 @@
-import Header from './Components/Header/Header';
+import Header from '../../Shared/Header/Header';
 import SideBarApp from './Components/SideBar/Side-bar-app/SideBarApp';
 import Main from './Components/Main/Main';
-import Footer from './Components/Footer/Footer';
+import Footer from '../../Shared/Footer/Footer';
 import './MainPage.scss';
 
 function MainPage() {

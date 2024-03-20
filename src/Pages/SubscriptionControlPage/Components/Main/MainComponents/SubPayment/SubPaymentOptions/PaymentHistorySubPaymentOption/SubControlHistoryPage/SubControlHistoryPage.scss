@@ -1,0 +1,59 @@
+.subControlHistoryPageContent {
+  position: relative;
+  margin: 40px auto;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.subControlHistoryPageContent button {
+  display: flex;
+  align-items: center;
+  width: 92px;
+  background-color: transparent;
+  border: none;
+  opacity: 0.7;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+.subControlHistoryPageContent button p {
+  margin: 0 0 2px 10px;
+  font-size: 17px;
+  color: rgb(24, 25, 27);
+  font-weight: 600;
+}
+
+.subControlHistoryPageContent button:hover {
+  opacity: 1;
+}
+
+.subControlHistoryPageText {
+  margin-bottom: 15px;
+  line-height: 21px;
+}
+
+.subControlHistoryPageText h2 {
+  font-size: 32px;
+}
+
+.subControlHistoryPageText p {
+  font-size: 17px;
+}
+
+.subControlHistoryPageText a {
+  text-decoration: none;
+  color: rgb(63, 104, 249);
+}
+
+.subControlHistoryPageText a:hover {
+  text-decoration: none;
+  color: rgb(63, 104, 249);
+}
+
+.subControlHistoryMapDiv {
+  background-color: white;
+  padding: 16px;
+  border-radius: 16px;
+}
+

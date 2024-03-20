@@ -1,0 +1,23 @@
+.paymentHistorySubPayment {
+  background-color: white;
+  border-radius: 20px;
+  padding: 16px;
+  margin-top: 8px;
+}
+
+.paymentHistorySubPayment h2 {
+  font-size: 21px;
+  margin-bottom: 25px;
+}
+
+.paymentHistorySubPayment a {
+  display: block;
+  font-size: 17px;
+  margin: 15px 0 5px 0;
+  text-decoration: none;
+  color: rgb(37, 84, 248);
+}
+
+.paymentHistorySubPayment a:hover {
+  color: rgb(37, 84, 248);
+}

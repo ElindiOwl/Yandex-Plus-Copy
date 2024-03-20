@@ -1,13 +1,20 @@
-import { useState, useEffect } from 'react';
-import logo from '../assets/Icons/Logo.png';
+import { useState, useEffect, FC } from 'react';
+import logo from './Icons/Logo.png';
 import './Header.scss';
 import HeaderMenu from './HeaderMenu/HeaderMenu';
 import HeaderPortrait from './HeaderPortrair/HeaderPortrait';
 
-function Header() {
+interface HeaderProps {
+    isScrollableStyle?: boolean;
+}
+
+const Header: FC<HeaderProps> = ({ isScrollableStyle = true }) => {
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
+        if (!isScrollableStyle) {
+            return;
+        }
         const handleScroll = () => {
             setScrolled(window.scrollY > 0);
         };
@@ -37,6 +44,6 @@ function Header() {
 
         </div>
     );
-}
+};
 
 export default Header;

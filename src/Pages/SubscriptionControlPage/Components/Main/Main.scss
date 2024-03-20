@@ -1,13 +1,13 @@
+.mainPageDivFinalSubControl {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
 .mainPageDivSubControl {
   position: relative;
   top: 22px;
   padding-bottom: 22px;
   padding-top: 5px;
   max-width: 600px;
-}
-
-.mainPageDivFinalSubControl {
-  display: flex;
-  justify-content: center;
-  align-items: baseline;
 }
