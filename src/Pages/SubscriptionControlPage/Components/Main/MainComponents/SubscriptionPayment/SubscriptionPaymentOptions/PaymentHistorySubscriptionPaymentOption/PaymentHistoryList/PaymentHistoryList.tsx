@@ -1,4 +1,4 @@
-import './PaymentHistorySubPaymentOptionPaymentsList.scss';
+import './PaymentHistoryList.scss';
 
 const Payment = (paymentHistoryDataProps) => {
     return (

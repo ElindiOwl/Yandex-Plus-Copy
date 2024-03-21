@@ -3,8 +3,8 @@ import { Route, Routes } from 'react-router';
 import MainPage from './Pages/MainPage/MainPage';
 import SubscriptionControlPage from './Pages/SubscriptionControlPage/SubscriptionControlPage';
 import NotFoundPage from './Pages/NotFoundPage/NotFoundPage';
-import SubControlHistoryPage
-    from './Pages/SubscriptionControlPage/Components/Main/MainComponents/SubPayment/SubPaymentOptions/PaymentHistorySubPaymentOption/SubControlHistoryPage/SubControlHistoryPage';
+import SubscriptionControlHistoryPage
+    from './Pages/SubscriptionControlPage/Components/Main/MainComponents/SubscriptionPayment/SubscriptionPaymentOptions/PaymentHistorySubscriptionPaymentOption/SubscriptionControlHistoryPage/SubscriptionControlHistoryPage';
 
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
             <Routes>
                 <Route path='/' element={<MainPage />} />
                 <Route path='/subControl' element={<SubscriptionControlPage />} />
-                <Route path='/subControlHistoryPage' element={<SubControlHistoryPage />} />
+                <Route path='/subControlHistoryPage' element={<SubscriptionControlHistoryPage />} />
                 <Route path='*' element={<NotFoundPage />} />
             </Routes>
         </div>

@@ -1,6 +1,6 @@
-import './TopZone.scss';
+import './SubscriptionControlTextHeader.scss';
 
-const TopZone = () => {
+const SubscriptionControlTextHeader = () => {
     return (
         <div className='topZoneSubControl'>
             <div className='yandexPlusTextSubControl'>
@@ -22,4 +22,4 @@ const TopZone = () => {
     );
 };
 
-export default TopZone;
+export default SubscriptionControlTextHeader;

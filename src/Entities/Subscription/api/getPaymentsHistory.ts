@@ -8,7 +8,7 @@ export const getPaymentsHistory = async () => {
         setTimeout(function() {
                 resolve(paymentsHistoryDTO);
             },
-            200);
+            10);
     });
 
 };

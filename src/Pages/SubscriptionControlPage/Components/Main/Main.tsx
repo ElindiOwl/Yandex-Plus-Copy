@@ -1,13 +1,14 @@
 import './Main.scss';
-import TopZone from './MainComponents/TopZone/TopZone';
-import SubPayment from './MainComponents/SubPayment/SubPayment';
+import SubscriptionControlTextHeader
+    from './MainComponents/SubscriptionControlTextHeader/SubscriptionControlTextHeader';
+import SubscriptionPayment from './MainComponents/SubscriptionPayment/SubscriptionPayment';
 
 const Main = () => {
     return (
         <div className='mainPageDivFinalSubControl'>
             <div className='mainPageDivSubControl'>
-                <TopZone />
-                <SubPayment />
+                <SubscriptionControlTextHeader />
+                <SubscriptionPayment />
             </div>
         </div>
     );

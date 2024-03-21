@@ -1,8 +1,8 @@
-import './ChangePlanSubPaymentOption.scss';
+import './ChangePlanSubscriptionPaymentOption.scss';
 import OneMonthSub from '../../../../../assets/Images/OneMonthSub.png';
 import OneYearSub from '../../../../../assets/Images/OneYearSub.png';
 
-const ChangePlanSubPaymentOption = () => {
+const ChangePlanSubscriptionPaymentOption = () => {
     return (
         <div className='changePlanSubPayment'>
             <div className='oneMonthPlanSubPayment'>
@@ -38,4 +38,4 @@ const ChangePlanSubPaymentOption = () => {
     );
 };
 
-export default ChangePlanSubPaymentOption;
+export default ChangePlanSubscriptionPaymentOption;

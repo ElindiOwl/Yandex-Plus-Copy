@@ -5,7 +5,7 @@ const sideBarActive = () => {
     return (
         <div className='plusBackgroundActive'>
             <a className='pluslink'
-               href='/Subscription'>
+               href='/subControl'>
                 <div className='plusInside'>
                     <div className='linkDiv'>
                         <h6 className='plusActive'>Плюс <br />активен</h6>

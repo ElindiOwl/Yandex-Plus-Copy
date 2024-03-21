@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
-import './SubPayment.scss';
-import ChangePlanSubPaymentOption from './SubPaymentOptions/ChangePlanSubPaymentOption/ChangePlanSubPaymentOption';
+import './SubscriptionPayment.scss';
+import ChangePlanSubscriptionPaymentOption
+    from './SubscriptionPaymentOptions/ChangePlanSubscriptionPaymentOption/ChangePlanSubscriptionPaymentOption';
 import PaymentHistoryPaymentOption
-    from './SubPaymentOptions/PaymentHistorySubPaymentOption/PaymentHistorySubPaymentOption';
-import PaymentMethodSubPaymentOption
-    from './SubPaymentOptions/PaymentMethodSubPaymentOption/PaymentMethodSubPaymentOption';
+    from './SubscriptionPaymentOptions/PaymentHistorySubscriptionPaymentOption/PaymentHistorySubscriptionPaymentOption';
+import PaymentMethodSubscriptionPaymentOption
+    from './SubscriptionPaymentOptions/PaymentMethodSubscriptionPaymentOption/PaymentMethodSubscriptionPaymentOption';
 
-const SubPayment = () => {
-    const [activeOption, setActiveOption] = useState(null);
+const SubscriptionPayment = () => {
+    const [activeOption, setActiveOption] = useState('changePlan');
 
     const handleToggleOption = (option) => {
         setActiveOption(activeOption === option ? null : option);
@@ -45,16 +46,16 @@ const SubPayment = () => {
 
             </div>
             <div className={`subPaymentOption ${activeOption === 'changePlan' ? 'active' : ''}`}>
-                {activeOption === 'changePlan' && <ChangePlanSubPaymentOption />}
+                {activeOption === 'changePlan' && <ChangePlanSubscriptionPaymentOption />}
             </div>
             <div className={`subPaymentOption ${activeOption === 'paymentHistory' ? 'active' : ''}`}>
                 {activeOption === 'paymentHistory' && <PaymentHistoryPaymentOption />}
             </div>
             <div className={`subPaymentOption ${activeOption === 'paymentMethod' ? 'active' : ''}`}>
-                {activeOption === 'paymentMethod' && <PaymentMethodSubPaymentOption />}
+                {activeOption === 'paymentMethod' && <PaymentMethodSubscriptionPaymentOption />}
             </div>
         </>
     );
 };
 
-export default SubPayment;
+export default SubscriptionPayment;

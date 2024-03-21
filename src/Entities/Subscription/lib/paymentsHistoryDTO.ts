@@ -4,13 +4,13 @@ import { PaymentHistory } from '../model/paymentHistoryTypes';
 export const paymentsHistoryDTO: PaymentHistory[] = [
     {
         subscriptionName: 'Яндекс Плюс',
-        paymentDate: '2023-02-16',
+        paymentDate: '2024-02-16',
         subscriptionPrice: 299,
         subscriptionImg: yandexPlus,
     },
     {
         subscriptionName: 'Яндекс Плюс',
-        paymentDate: '2024-01-16',
+        paymentDate: '2024-01-18',
         subscriptionPrice: 299,
         subscriptionImg: yandexPlus,
     },
@@ -28,14 +28,14 @@ export const paymentsHistoryDTO: PaymentHistory[] = [
     },
     {
         subscriptionName: 'Яндекс Плюс',
-        paymentDate: '2023-10-16',
+        paymentDate: '2023-10-17',
         subscriptionPrice: 299,
         subscriptionImg: yandexPlus,
     },
     {
         subscriptionName: 'Яндекс Плюс',
         paymentDate: '2023-9-16',
-        subscriptionPrice: 299,
+        subscriptionPrice: 1,
         subscriptionImg: yandexPlus,
     },
 ];
