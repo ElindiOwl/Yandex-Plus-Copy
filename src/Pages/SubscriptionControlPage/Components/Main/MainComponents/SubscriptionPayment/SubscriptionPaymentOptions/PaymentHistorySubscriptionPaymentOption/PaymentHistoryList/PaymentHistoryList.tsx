@@ -1,6 +1,7 @@
 import './PaymentHistoryList.scss';
+import { PaymentDataProps } from 'src/Entities/Subscription/model/PaymentDataTypes';
 
-const Payment = (paymentHistoryDataProps) => {
+const Payment = (paymentHistoryDataProps: PaymentDataProps) => {
     return (
         <div className='paymentHistoryIndividualDiv'>
             <img src={paymentHistoryDataProps.img} alt='yandex plus' />

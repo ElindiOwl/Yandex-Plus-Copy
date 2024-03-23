@@ -1,0 +1,18 @@
+.nextPaymentHeaderText {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  height: 15px;
+}
+
+.nextPaymentHeaderText h6 {
+  margin: 0;
+  font-size: 16.3px;
+}
+
+.nextPaymentHeaderText p {
+  margin: 0;
+  font-size: 16.3px;
+  color: rgb(109, 111, 120);
+}

@@ -8,7 +8,7 @@ const Main = () => {
         <div className='mainPageDivFinalSubControl'>
             <div className='mainPageDivSubControl'>
                 <SubscriptionControlTextHeader />
-                <SubscriptionPayment />
+                <SubscriptionPayment displayCount={1} />
             </div>
         </div>
     );

@@ -24,7 +24,7 @@ const Header: FC<HeaderProps> = ({ isScrollableStyle = true }) => {
     }, []);
 
     return (
-        <div className={`HeaderDiv ${scrolled ? 'scrolled' : ''} ${!isScrollableStyle ? 'relativePosition' : ''}`}>
+        <header className={`HeaderDiv ${scrolled ? 'scrolled' : ''} ${!isScrollableStyle ? 'relativePosition' : ''}`}>
             <div className='navbarDiv'>
                 <div className='headerLogo'>
                     <a href='/' className='logo'>
@@ -42,7 +42,7 @@ const Header: FC<HeaderProps> = ({ isScrollableStyle = true }) => {
                 </div>
             </div>
 
-        </div>
+        </header>
     );
 };
 

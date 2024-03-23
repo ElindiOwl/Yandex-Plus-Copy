@@ -1,6 +1,6 @@
-import Footer from '../../Shared/Footer/Footer';
-import Header from '../../Shared/Header/Header';
-import Main from './Components/Main/Main';
+import Header from 'src/Shared/Header/Header';
+import Main from 'src/Pages/SubscriptionControlPage/Components/Main/Main';
+import Footer from 'src/Shared/Footer/Footer';
 
 
 function SubscriptionControlPage() {
