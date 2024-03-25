@@ -1,0 +1,14 @@
+.footer {
+  padding: 24px;
+  margin-bottom: 54px;
+  max-width: 1250px;
+  margin-top: auto;
+}
+
+@media screen and (max-width: 800px) {
+  .footerDiv {
+    padding: 20px 0 5px 5px;
+    margin-bottom: 5px;
+    max-width: 1250px;
+  }
+}

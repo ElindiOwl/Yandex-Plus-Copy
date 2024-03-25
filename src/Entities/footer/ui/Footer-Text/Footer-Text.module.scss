@@ -1,0 +1,14 @@
+.footerText {
+  font-size: 13px;
+  margin: 0;
+}
+
+.footerLinks {
+  text-decoration: none;
+  color: black;
+}
+
+.footerLinks:hover {
+  color: gray;
+  transition: 0.3s;
+}
