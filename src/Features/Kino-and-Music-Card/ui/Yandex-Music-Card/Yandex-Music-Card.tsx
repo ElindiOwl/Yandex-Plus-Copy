@@ -1,4 +1,4 @@
-import './YandexMusicCard.scss';
+import './Yandex-Music-Card.scss';
 import { useEffect, useState } from 'react';
 
 const YandexMusicCard = () => {

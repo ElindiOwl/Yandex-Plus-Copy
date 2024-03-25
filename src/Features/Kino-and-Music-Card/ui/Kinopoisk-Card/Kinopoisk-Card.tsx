@@ -1,4 +1,4 @@
-import './KinopoiskCard.scss';
+import './Kinopoisk-Card.scss';
 import { useEffect, useState } from 'react';
 
 const KinopoiskCard = () => {

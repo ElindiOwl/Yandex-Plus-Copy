@@ -1,5 +1,5 @@
 import './PaymentHistoryList.scss';
-import { PaymentDataProps } from 'src/Entities/subscription/model/PaymentDataTypes';
+import { PaymentDataProps } from 'src/Entities/subscription/model/Payment-Data-Types';
 
 const Payment = (paymentHistoryDataProps: PaymentDataProps) => {
     return (

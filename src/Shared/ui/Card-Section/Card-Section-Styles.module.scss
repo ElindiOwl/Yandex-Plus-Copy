@@ -1,4 +1,4 @@
-.plusIdeasCardSection {
+.cardSection {
   background-color: white;
   padding-top: 24px;
   border-radius: 20px;
@@ -22,16 +22,4 @@
 
 .firstH {
   font-size: 24px;
-}
-
-.sliderOverflow {
-  padding: 24px;
-  overflow: hidden;
-}
-
-.sliderItems {
-  transition: all 1s ease;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
 }

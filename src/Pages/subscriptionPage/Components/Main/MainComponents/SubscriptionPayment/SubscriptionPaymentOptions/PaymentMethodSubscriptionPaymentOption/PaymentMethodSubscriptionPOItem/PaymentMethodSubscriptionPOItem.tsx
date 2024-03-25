@@ -1,5 +1,5 @@
 import './PaymentMethodSubscriptionPOItem.scss';
-import { PaymentDataProps } from 'src/Entities/subscription/model/PaymentDataTypes';
+import { PaymentDataProps } from 'src/Entities/subscription/model/Payment-Data-Types';
 
 const NextPaymentInfo = (nextPaymentDataProps: PaymentDataProps) => {
     return (

@@ -1,6 +1,6 @@
 import './PaymentsHistoryMap.scss';
 import { getMonth } from 'src/Shared/lib/getMonth';
-import { usePaymentsHistory } from 'src/Entities/subscription/model/usePaymentsHistory';
+import { usePaymentsHistory } from 'src/Entities/subscription/model/Use-Payments-History';
 import { getNominativeCaseMonth } from 'src/Shared/lib/getNominativeCaseMonth';
 import Payment
     from 'src/Pages/subscriptionPage/Components/Main/MainComponents/SubscriptionPayment/SubscriptionPaymentOptions/PaymentHistorySubscriptionPaymentOption/PaymentHistoryList/PaymentHistoryList';

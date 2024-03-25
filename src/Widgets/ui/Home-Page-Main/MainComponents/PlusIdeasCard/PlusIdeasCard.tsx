@@ -1,7 +1,7 @@
 import './PlusIdeasCard.scss';
 import { useEffect, useState } from 'react';
-import { usePlusIdeasImages } from 'src/Entities/advertising/model/use-Advertising-Card-Images/usePlusIdeasImages';
-import { AdvertisingCard } from 'src/Entities/advertising/ui/Plus-Ideas-Card-Set/AdvertisingCard';
+import { usePlusIdeasImages } from 'src/Entities/advertising/model/use-Advertising-Card-Images/Use-Plus-Ideas-Images';
+import { AdvertisingCard } from 'src/Entities/advertising/ui/Advertising-Card/Advertising-Card';
 import { NextSlideButton } from 'src/Shared/ui/Slide-Buttons/Next-Slide-Button/Next-Slide-Button';
 import { PrevSlideButton } from 'src/Shared/ui/Slide-Buttons/Prev-Slide-Button/Prev-Slide-Button';
 

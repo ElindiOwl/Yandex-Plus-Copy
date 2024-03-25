@@ -1,4 +1,4 @@
-import './HeaderMenu.scss';
+import './Header-Menu.scss';
 import { Squash as Hamburger } from 'hamburger-react';
 import { NavDropdown, Accordion } from 'react-bootstrap';
 import { useMenu } from 'src/Shared/lib/useMenu';

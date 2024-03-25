@@ -1,5 +1,5 @@
 import yandexPlus from '../../../Pages/subscriptionPage/Components/assets/Images/YandexPlus.png';
-import { PaymentHistory } from '../model/paymentHistoryTypes';
+import { PaymentHistory } from '../model/Payment-History-Types';
 
 export const paymentsHistoryDTO: PaymentHistory[] = [
     {

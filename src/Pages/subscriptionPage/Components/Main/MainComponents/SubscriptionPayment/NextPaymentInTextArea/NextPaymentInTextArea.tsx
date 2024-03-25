@@ -1,5 +1,5 @@
 import './NextPaymentInTextArea.scss';
-import { PaymentDataProps } from 'src/Entities/subscription/model/PaymentDataTypes';
+import { PaymentDataProps } from 'src/Entities/subscription/model/Payment-Data-Types';
 
 const NextPaymentInTextArea = (NextPaymentInTextAreaDataProps: PaymentDataProps) => {
     return (

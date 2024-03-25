@@ -6,7 +6,7 @@ import PaymentHistoryPaymentOption
     from './SubscriptionPaymentOptions/PaymentHistorySubscriptionPaymentOption/PaymentHistorySubscriptionPaymentOption';
 import PaymentMethodSubscriptionPaymentOption
     from './SubscriptionPaymentOptions/PaymentMethodSubscriptionPaymentOption/PaymentMethodSubscriptionPaymentOption';
-import { usePaymentsHistory } from 'src/Entities/subscription/model/usePaymentsHistory';
+import { usePaymentsHistory } from 'src/Entities/subscription/model/Use-Payments-History';
 import NextPaymentInTextArea from './NextPaymentInTextArea/NextPaymentInTextArea';
 import { getMonth } from 'src/Shared/lib/getMonth';
 

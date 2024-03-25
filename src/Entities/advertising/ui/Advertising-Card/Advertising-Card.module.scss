@@ -4,10 +4,18 @@
   display: flex;
   padding: 20px;
   align-self: center;
-  min-width: 236px;
-  height: 354px;
   background-size: cover;
   background-position: center;
+}
+
+.tallCardSetButton {
+  min-width: 236px;
+  height: 354px;
+}
+
+.smallCardSetButton {
+  min-width: 200px;
+  height: 200px;
 }
 
 .cardSetButton:hover {
@@ -16,8 +24,12 @@
 }
 
 @media screen and (max-width: 800px) {
-  .cardSetButton {
+  .tallCardSetButton {
     min-width: 160px;
     height: 236px;
+  }
+  .smallCardSetButton {
+    min-width: 160px;
+    height: 160px;
   }
 }

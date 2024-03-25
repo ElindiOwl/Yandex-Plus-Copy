@@ -1,4 +1,4 @@
-import './HeaderPortrait.scss';
+import './Header-Portrait.scss';
 import portrait from '../../../../Shared/assets/Icons/Island.png';
 import { useMenu } from 'src/Shared/lib/useMenu';
 

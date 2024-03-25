@@ -1,0 +1,11 @@
+.sliderOverflow {
+  padding: 24px;
+  overflow: hidden;
+}
+
+.sliderItems {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}

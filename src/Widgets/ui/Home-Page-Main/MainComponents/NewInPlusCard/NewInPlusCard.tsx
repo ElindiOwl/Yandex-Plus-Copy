@@ -1,14 +1,14 @@
 import './NewInPlusCard.scss';
 import { useEffect, useState } from 'react';
-import Planet from '../../../../../Shared/assets/Images/Home-Page-Advertising/NewInPlusCardImages/Planet.png';
-import Kognata from '../../../../../Shared/assets/Images/Home-Page-Advertising/NewInPlusCardImages/Kognata.png';
-import Oscar from '../../../../../Shared/assets/Images/Home-Page-Advertising/NewInPlusCardImages/Oscar.png';
-import LoveL from '../../../../../Shared/assets/Images/Home-Page-Advertising/NewInPlusCardImages/LoveLanguage.png';
-import Kvizes from '../../../../../Shared/assets/Images/Home-Page-Advertising/NewInPlusCardImages/Kvizes.png';
-import Final from '../../../../../Shared/assets/Images/Home-Page-Advertising/NewInPlusCardImages/FantasyFinal.png';
-import Daily from '../../../../../Shared/assets/Images/Home-Page-Advertising/NewInPlusCardImages/DailyDragon.png';
+import Planet from '../../../../../Shared/assets/Images/Home-Page-Advertising/New-In-Plus-Card-Images/Planet.png';
+import Kognata from '../../../../../Shared/assets/Images/Home-Page-Advertising/New-In-Plus-Card-Images/Kognata.png';
+import Oscar from '../../../../../Shared/assets/Images/Home-Page-Advertising/New-In-Plus-Card-Images/Oscar.png';
+import LoveL from '../../../../../Shared/assets/Images/Home-Page-Advertising/New-In-Plus-Card-Images/LoveLanguage.png';
+import Kvizes from '../../../../../Shared/assets/Images/Home-Page-Advertising/New-In-Plus-Card-Images/Kvizes.png';
+import Final from '../../../../../Shared/assets/Images/Home-Page-Advertising/New-In-Plus-Card-Images/FantasyFinal.png';
+import Daily from '../../../../../Shared/assets/Images/Home-Page-Advertising/New-In-Plus-Card-Images/DailyDragon.png';
 import Kombinator
-    from '../../../../../Shared/assets/Images/Home-Page-Advertising/NewInPlusCardImages/KombinatorGame.png';
+    from '../../../../../Shared/assets/Images/Home-Page-Advertising/New-In-Plus-Card-Images/KombinatorGame.png';
 
 const NewInPlusCard = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

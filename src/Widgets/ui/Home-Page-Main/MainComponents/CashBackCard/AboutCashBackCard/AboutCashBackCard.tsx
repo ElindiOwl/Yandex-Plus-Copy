@@ -1,7 +1,7 @@
 import './AboutCashBackCard.scss';
 import { useEffect, useState } from 'react';
 import YandexImage
-    from '../../../../../../Shared/assets/Images/Home-Page-Advertising/AboutCashBackCardImages/Yandex.svg';
+    from '../../../../../../Shared/assets/Images/Home-Page-Advertising/About-CashBack-Card-Images/Yandex.svg';
 
 const AboutCashBackCard = () => {
     const [currentIndex, setCurrentIndex] = useState(0);

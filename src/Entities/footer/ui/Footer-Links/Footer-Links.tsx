@@ -1,4 +1,4 @@
-import style from './footer-Links.module.scss';
+import style from './Footer-Links.module.scss';
 
 export const FooterLinks = () => {
     return (

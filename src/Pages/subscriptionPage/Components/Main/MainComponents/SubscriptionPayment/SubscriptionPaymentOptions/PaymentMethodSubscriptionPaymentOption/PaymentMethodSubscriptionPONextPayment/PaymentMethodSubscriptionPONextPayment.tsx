@@ -1,5 +1,5 @@
 import './PaymentMethodSubscriptionPONextPayment.scss';
-import { usePaymentsHistory } from 'src/Entities/subscription/model/usePaymentsHistory';
+import { usePaymentsHistory } from 'src/Entities/subscription/model/Use-Payments-History';
 import { getMonth } from 'src/Shared/lib/getMonth';
 import NextPaymentInfo from '../PaymentMethodSubscriptionPOItem/PaymentMethodSubscriptionPOItem';
 import plus3D from '../../../../../../assets/Images/YandexPlus3D.png';

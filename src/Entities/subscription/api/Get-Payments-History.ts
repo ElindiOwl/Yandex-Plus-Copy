@@ -1,5 +1,5 @@
-import { paymentsHistoryDTO } from '../lib/paymentsHistoryDTO';
-import { PaymentHistory } from '../model/paymentHistoryTypes';
+import { paymentsHistoryDTO } from '../lib/Payments-History-DTO';
+import { PaymentHistory } from '../model/Payment-History-Types';
 
 
 export const getPaymentsHistory = async () => {
