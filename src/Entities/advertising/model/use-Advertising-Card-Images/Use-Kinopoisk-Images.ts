@@ -8,8 +8,8 @@ export const useKinopoiskImages = () => {
 
     useEffect(() => {
         const fetchKinopoiskImages = async () => {
-            const plusIdeasCardImagesDTO = await getKinopoiskImages();
-            setKinopoiskImages(plusIdeasCardImagesDTO);
+            const kinopoiskCardImagesDTO = await getKinopoiskImages();
+            setKinopoiskImages(kinopoiskCardImagesDTO);
         };
 
         fetchKinopoiskImages();

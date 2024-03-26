@@ -1,10 +1,10 @@
-import { kinoImagesDTO } from 'src/Entities/advertising/lib/Card-Set-Images/Kino-Card-Images';
 import { AdvertisingImages } from 'src/Entities/advertising/model/Advertising-Card-Images-Types';
+import { AboutCashBackCardImagesDTO } from 'src/Entities/advertising/lib/Card-Set-Images/About-CashBack-Card-Images';
 
-export const getKinopoiskImages = async () => {
+export const getAboutCashBackImages = async () => {
     return await new Promise<AdvertisingImages[]>(function(resolve) {
         setTimeout(function() {
-            resolve(kinoImagesDTO);
+            resolve(AboutCashBackCardImagesDTO);
         }, 10);
     });
 };

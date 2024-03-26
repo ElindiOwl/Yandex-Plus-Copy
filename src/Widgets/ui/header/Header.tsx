@@ -2,8 +2,8 @@ import { FC } from 'react';
 import logo from '../../../Shared/assets/Icons/Logo.png';
 import './Header.scss';
 import { useScrollHandler } from 'src/Shared/lib/useScrollHandler';
-import { HeaderPortrait } from 'src/Features/header/ui/HeaderPortrait/Header-Portrait';
-import { HeaderMenu } from 'src/Features/header/ui/Header-Menu/Header-Menu';
+import { HeaderPortrait } from 'src/Features/ui/Header/HeaderPortrait/Header-Portrait';
+import { HeaderMenu } from 'src/Features/ui/Header/Header-Menu/Header-Menu';
 
 interface HeaderProps {
     isScrollableStyle?: boolean;

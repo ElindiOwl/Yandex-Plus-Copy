@@ -1,3 +1,8 @@
+import { FC } from 'react';
+
 export interface ImageCardsSlideProps {
-    itemsToSlide?: number;
+    cardImagesFunction: () => { src: string }[];
+    itemsToSlide: number;
+    cardSize: 'tall' | 'small';
+    cardHeaderText: FC;
 }

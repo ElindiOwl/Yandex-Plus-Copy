@@ -1,6 +1,6 @@
 import './Footer.scss';
-import { FooterLinks } from 'src/Entities/footer/ui/Footer-Links/Footer-Links';
-import { FooterText } from 'src/Entities/footer/ui/Footer-Text/Footer-Text';
+import { FooterLinks } from 'src/Entities/ui/footer/Footer-Links/Footer-Links';
+import { FooterText } from 'src/Entities/ui/footer/Footer-Text/Footer-Text';
 
 const Footer = () => {
     return (
