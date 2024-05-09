@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { AdvertisingImages } from 'src/Entities/advertising/model/Advertising-Card-Images-Types';
+import { CardSliderTemplate } from '../CardSliderTemplate';
 import { getSpendPointsImages } from 'src/Entities/advertising/api/Get-Advertising-Card-Images/Get-Spend-Points-Images';
 
 export const useSpendPointsImages = () => {
-    const [spendPointsImages, setSpendPointsImages] = useState<AdvertisingImages[]>([]);
+    const [spendPointsImages, setSpendPointsImages] = useState<CardSliderTemplate[]>([]);
 
     useEffect(() => {
         const fetchSpendPointsImages = async () => {

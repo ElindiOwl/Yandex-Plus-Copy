@@ -1,8 +1,8 @@
-import { AdvertisingImages } from 'src/Entities/advertising/model/Advertising-Card-Images-Types';
-import { plusIdeasImagesDTO } from 'src/Entities/advertising/lib/Card-Set-Images/Plus-Ideas-Card-Images';
+import { CardSliderTemplate } from '../../model/CardSliderTemplate';
+import { plusIdeasImagesDTO } from 'src/Entities/advertising/lib/Card-Set-Slider/Plus-Ideas-Card-Images';
 
 export const getPlusIdeasImages = async () => {
-    return await new Promise<AdvertisingImages[]>(function(resolve) {
+    return await new Promise<CardSliderTemplate[]>(function(resolve) {
         setTimeout(function() {
             resolve(plusIdeasImagesDTO);
         }, 10);

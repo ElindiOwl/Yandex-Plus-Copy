@@ -1,10 +1,10 @@
 import { getKinopoiskImages } from 'src/Entities/advertising/api/Get-Advertising-Card-Images/Get-Kinopoisk-Images';
 import { useEffect, useState } from 'react';
-import { AdvertisingImages } from 'src/Entities/advertising/model/Advertising-Card-Images-Types';
+import { CardSliderTemplate } from '../CardSliderTemplate';
 
 
 export const useKinopoiskImages = () => {
-    const [kinopoiskImages, setKinopoiskImages] = useState<AdvertisingImages[]>([]);
+    const [kinopoiskImages, setKinopoiskImages] = useState<CardSliderTemplate[]>([]);
 
     useEffect(() => {
         const fetchKinopoiskImages = async () => {

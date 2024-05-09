@@ -1,0 +1,27 @@
+.slider {
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.sliderOverflow {
+  padding: 24px;
+  overflow: hidden;
+}
+
+.sliderItems {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+@media screen and (max-width: 800px) {
+  .sliderOverflow {
+    padding: 15px;
+  }
+}

@@ -1,4 +1,4 @@
-export const MoveSlideLeft = (index, setIndex) => {
+export const moveSlideLeft = (index, setIndex) => {
     if (index === 0) {
         return;
     }

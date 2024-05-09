@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import { AdvertisingImages } from 'src/Entities/advertising/model/Advertising-Card-Images-Types';
+import { CardSliderTemplate } from '../CardSliderTemplate';
 import { getYandexMusicImages } from 'src/Entities/advertising/api/Get-Advertising-Card-Images/Get-Music-Images';
 
 export const useMusicImages = () => {
-    const [musicImages, setMusicImages] = useState<AdvertisingImages[]>([]);
+    const [musicImages, setMusicImages] = useState<CardSliderTemplate[]>([]);
 
     useEffect(() => {
         const fetchMusicImages = async () => {

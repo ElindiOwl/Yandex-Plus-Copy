@@ -1,8 +1,8 @@
-import { AdvertisingImages } from 'src/Entities/advertising/model/Advertising-Card-Images-Types';
-import { yandexMusicImagesDTO } from 'src/Entities/advertising/lib/Card-Set-Images/Music-Card-Images';
+import { CardSliderTemplate } from '../../model/CardSliderTemplate';
+import { yandexMusicImagesDTO } from 'src/Entities/advertising/lib/Card-Set-Slider/Music-Card-Images';
 
 export const getYandexMusicImages = async () => {
-    return await new Promise<AdvertisingImages[]>(function(resolve) {
+    return await new Promise<CardSliderTemplate[]>(function(resolve) {
         setTimeout(function() {
             resolve(yandexMusicImagesDTO);
         }, 10);

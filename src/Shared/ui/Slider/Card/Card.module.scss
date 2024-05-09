@@ -1,0 +1,93 @@
+.cardSetButton {
+  border: none;
+  border-radius: 15px;
+  display: flex;
+  padding: 10px;
+  align-self: center;
+  background-size: cover;
+  background-position: center;
+  background-color: rgb(241, 243, 245);
+}
+
+.tallCardSetButton {
+  min-width: 236px;
+  height: 354px;
+}
+
+.smallCardSetButton {
+  min-width: 200px;
+  height: 200px;
+}
+
+.wideCardSetButton {
+  min-width: 448px;
+  height: 152px;
+
+  .compositeImage {
+    height: 120px;
+    width: 120px;
+    align-self: center;
+  }
+
+  .compositeTextContainer {
+    width: 276px;
+    margin-left: 20px;
+    text-align: left;
+    align-self: center;
+    margin-bottom: 10px;
+  }
+
+  .compositeHeader {
+    font-size: 20px;
+    color: black;
+    margin: 0 0 5px 0;
+    line-height: 1;
+    height: 20px;
+  }
+
+  .compositeParagraph {
+    color: black;
+    margin: 0;
+    line-height: 1;
+  }
+}
+
+.cardSetButton:hover {
+  transform: scale(1.05);
+  transition: transform 0.1s ease-in-out;
+}
+
+
+@media screen and (max-width: 800px) {
+  .tallCardSetButton {
+    min-width: 160px;
+    height: 236px;
+  }
+  .smallCardSetButton {
+    min-width: 160px;
+    height: 160px;
+  }
+  .wideCardSetButton {
+    min-width: 320px;
+    height: 114px;
+
+    .compositeTextContainer {
+      width: 188px;
+    }
+
+    .compositeImage {
+      height: 80px;
+      width: 80px;
+    }
+
+    .compositeHeader {
+      font-size: 14px;
+      margin: 0;
+      height: 15px;
+    }
+
+    .compositeParagraph {
+      font-size: 13px;
+    }
+  }
+}

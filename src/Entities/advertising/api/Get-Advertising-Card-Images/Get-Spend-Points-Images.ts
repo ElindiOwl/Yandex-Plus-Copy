@@ -1,10 +1,10 @@
-import { AdvertisingImages } from 'src/Entities/advertising/model/Advertising-Card-Images-Types';
-import { spendPointsCardImages } from 'src/Entities/advertising/lib/Card-Set-Images/Spend-Points-Card-Images';
+import { CardSliderTemplate } from '../../model/CardSliderTemplate';
+import { spendPointsCardImagesDTO } from 'src/Entities/advertising/lib/Card-Set-Slider/Spend-Points-Card-Images';
 
 export const getSpendPointsImages = async () => {
-    return await new Promise<AdvertisingImages[]>(function(resolve) {
+    return await new Promise<CardSliderTemplate[]>(function(resolve) {
         setTimeout(function() {
-            resolve(spendPointsCardImages);
+            resolve(spendPointsCardImagesDTO);
         }, 10);
     });
 };

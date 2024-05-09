@@ -1,13 +1,13 @@
-import { useMemo, useSyncExternalStore } from 'react';
+import { RefObject, useMemo, useSyncExternalStore } from 'react';
 
-const subscribe = (callback) => {
+const subscribe: (callback: () => void) => () => void = (callback) => {
     window.addEventListener('resize', callback);
     return () => {
         window.removeEventListener('resize', callback);
     };
-}
+};
 
-const useDimensions = (ref) => {
+const useDimensions = (ref: RefObject<HTMLElement>): { width: number; height: number } => {
     const dimensions = useSyncExternalStore(
         subscribe,
         () => JSON.stringify({
@@ -16,6 +16,6 @@ const useDimensions = (ref) => {
         }),
     );
     return useMemo(() => JSON.parse(dimensions), [dimensions]);
-}
+};
 
 export { useDimensions };

@@ -1,4 +1,4 @@
-export const MoveSlideRight = (index, setIndex, cardImages) => {
+export const moveSlideRight = (index, setIndex, cardImages) => {
     if (index >= cardImages.length) {
         return;
     }

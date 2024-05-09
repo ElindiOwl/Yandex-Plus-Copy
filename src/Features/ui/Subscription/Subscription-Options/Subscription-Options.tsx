@@ -1,0 +1,74 @@
+import React, { useState } from 'react';
+import './Subscription-Options.scss';
+import { usePaymentsHistory } from 'src/Entities/subscription/model/Use-Payments-History.ts';
+import SubscriptionHeader from 'src/Entities/subscription/ui/Subscription-Header/Subscription-Header.tsx';
+import { getMonth } from 'src/Shared/lib/getMonth.tsx';
+import ChangePlan
+    from 'src/Features/ui/Subscription/Change-Plan/Change-Plan.tsx';
+import PaymentHistoryPaymentOption
+    from 'src/Features/ui/Subscription/Payment-History/Payment-History.tsx';
+import PaymentMethod
+    from 'src/Features/ui/Subscription/Payment-Method/Payment-Method.tsx';
+
+interface NextPaymentMapProps {
+    displayCount?: number;
+    option?: string;
+}
+
+const SubscriptionOptions: React.FC<NextPaymentMapProps> = ({ displayCount, option }) => {
+    const [activeOption, setActiveOption] = useState(option || 'changePlan');
+
+    const handleToggleOption = (option: string) => {
+        setActiveOption(activeOption === option ? '' : option);
+    };
+
+    const nextPaymentInfo = usePaymentsHistory();
+
+    const limitedPayments = displayCount ? nextPaymentInfo.slice(0, displayCount) : nextPaymentInfo;
+
+    return (
+        limitedPayments.map((payment, index) => (
+            <div key={index} className='subPaymentDivSubControl'>
+                <div>
+                    <SubscriptionHeader
+                        price={payment.subscriptionPrice}
+                        date={`${new Date(payment.paymentDate).getDate()} ${getMonth(new Date(payment.paymentDate))}`}
+                    />
+                    <div className='buttonsSubPaymentsControl'>
+                        <button
+                            onClick={() => handleToggleOption('changePlan')}
+                            className={activeOption === 'changePlan' ? 'activeButton' : 'inactiveButton'}
+                        >
+                            Сменить план
+                        </button>
+                        <button
+                            onClick={() => handleToggleOption('paymentHistory')}
+                            className={activeOption === 'paymentHistory' ? 'activeButton' : 'inactiveButton'}
+                        >
+                            История списаний
+                        </button>
+                        <button
+                            onClick={() => handleToggleOption('paymentMethod')}
+                            className={activeOption === 'paymentMethod' ? 'activeButton' : 'inactiveButton'}
+                        >
+                            Способ оплаты
+                        </button>
+                    </div>
+                </div>
+                <div>
+                    <div className={`subPaymentOption ${activeOption === 'changePlan' ? 'active' : ''}`}>
+                        {activeOption === 'changePlan' && <ChangePlan />}
+                    </div>
+                    <div className={`subPaymentOption ${activeOption === 'paymentHistory' ? 'active' : ''}`}>
+                        {activeOption === 'paymentHistory' && <PaymentHistoryPaymentOption />}
+                    </div>
+                    <div className={`subPaymentOption ${activeOption === 'paymentMethod' ? 'active' : ''}`}>
+                        {activeOption === 'paymentMethod' && <PaymentMethod />}
+                    </div>
+                </div>
+            </div>
+        ))
+    );
+};
+
+export default SubscriptionOptions;

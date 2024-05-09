@@ -1,0 +1,28 @@
+.subPaymentDivSubControl {
+  background-color: white;
+  border-radius: 20px;
+}
+
+.buttonsSubPaymentsControl {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-template-rows: auto;
+}
+
+.buttonsSubPaymentsControl .inactiveButton {
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid #e8ebed;
+  padding: 13px 16px 13px 16px;
+  font-size: 17px;
+  color: rgb(37, 84, 248);
+}
+
+.buttonsSubPaymentsControl .activeButton {
+  background-color: transparent;
+  border: none;
+  border-top: 2px solid rgb(37, 84, 248);
+  padding: 13px 16px 13px 16px;
+  font-size: 17px;
+  color: rgb(37, 84, 248);
+}
