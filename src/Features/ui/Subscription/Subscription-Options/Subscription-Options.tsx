@@ -28,43 +28,43 @@ const SubscriptionOptions: React.FC<NextPaymentMapProps> = ({ displayCount, opti
 
     return (
         limitedPayments.map((payment, index) => (
-            <div key={index} className='subPaymentDivSubControl'>
-                <div>
-                    <SubscriptionHeader
-                        price={payment.subscriptionPrice}
-                        date={`${new Date(payment.paymentDate).getDate()} ${getMonth(new Date(payment.paymentDate))}`}
-                    />
-                    <div className='buttonsSubPaymentsControl'>
-                        <button
-                            onClick={() => handleToggleOption('changePlan')}
-                            className={activeOption === 'changePlan' ? 'activeButton' : 'inactiveButton'}
-                        >
-                            Сменить план
-                        </button>
-                        <button
-                            onClick={() => handleToggleOption('paymentHistory')}
-                            className={activeOption === 'paymentHistory' ? 'activeButton' : 'inactiveButton'}
-                        >
-                            История списаний
-                        </button>
-                        <button
-                            onClick={() => handleToggleOption('paymentMethod')}
-                            className={activeOption === 'paymentMethod' ? 'activeButton' : 'inactiveButton'}
-                        >
-                            Способ оплаты
-                        </button>
+            <div>
+                <div key={index} className='subPaymentDivSubControl'>
+                    <div>
+                        <SubscriptionHeader
+                            price={payment.subscriptionPrice}
+                            date={`${new Date(payment.paymentDate).getDate()} ${getMonth(new Date(payment.paymentDate))}`}
+                        />
+                        <div className='buttonsSubPaymentsControl'>
+                            <button
+                                onClick={() => handleToggleOption('changePlan')}
+                                className={activeOption === 'changePlan' ? 'activeButton' : 'inactiveButton'}
+                            >
+                                Сменить план
+                            </button>
+                            <button
+                                onClick={() => handleToggleOption('paymentHistory')}
+                                className={activeOption === 'paymentHistory' ? 'activeButton' : 'inactiveButton'}
+                            >
+                                История списаний
+                            </button>
+                            <button
+                                onClick={() => handleToggleOption('paymentMethod')}
+                                className={activeOption === 'paymentMethod' ? 'activeButton' : 'inactiveButton'}
+                            >
+                                Способ оплаты
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div className={`subPaymentOption ${activeOption === 'changePlan' ? 'active' : ''}`}>
-                        {activeOption === 'changePlan' && <ChangePlan />}
-                    </div>
-                    <div className={`subPaymentOption ${activeOption === 'paymentHistory' ? 'active' : ''}`}>
-                        {activeOption === 'paymentHistory' && <PaymentHistoryPaymentOption />}
-                    </div>
-                    <div className={`subPaymentOption ${activeOption === 'paymentMethod' ? 'active' : ''}`}>
-                        {activeOption === 'paymentMethod' && <PaymentMethod />}
-                    </div>
+                <div className={`subPaymentOption ${activeOption === 'changePlan' ? 'active' : ''}`}>
+                    {activeOption === 'changePlan' && <ChangePlan />}
+                </div>
+                <div className={`subPaymentOption ${activeOption === 'paymentHistory' ? 'active' : ''}`}>
+                    {activeOption === 'paymentHistory' && <PaymentHistoryPaymentOption />}
+                </div>
+                <div className={`subPaymentOption ${activeOption === 'paymentMethod' ? 'active' : ''}`}>
+                    {activeOption === 'paymentMethod' && <PaymentMethod />}
                 </div>
             </div>
         ))

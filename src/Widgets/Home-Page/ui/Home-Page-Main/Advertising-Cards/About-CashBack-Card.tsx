@@ -1,6 +1,6 @@
 import style from 'src/Widgets/Home-Page/ui/Home-Page-Main/Advertising-Cards/Card.module.scss';
 import { TextHeader } from 'src/Shared/ui/Text-Header/Text-Header.tsx';
-import { CardsSlider } from 'src/Shared/ui/Slider/CardsSlider.tsx';
+import { CardsSlider } from 'src/Shared/ui/Slider/Cards-Slider.tsx';
 import yandex from 'src/Shared/assets/Images/Home-Page-Advertising/About-CashBack-Card-Images/Yandex.svg';
 import {
     useAboutCashBackImages,
@@ -23,7 +23,7 @@ export const AboutCashBackCard = () => {
             <CardsSlider cardSize={'tall'}
                          cards={cards}
                          cardType={'simple'}
-                         itemsToSlide={2}
+                         slidesPerGroup={2}
             />
         </div>
     );

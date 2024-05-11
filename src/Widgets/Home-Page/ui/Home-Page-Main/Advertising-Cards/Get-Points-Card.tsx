@@ -1,7 +1,7 @@
 import { useGetPointsImages } from 'src/Entities/advertising/model/use-Advertising-Card-Images/Use-GetPoints-Images.ts';
 import style from 'src/Widgets/Home-Page/ui/Home-Page-Main/Advertising-Cards/Card.module.scss';
 import { TextHeader } from 'src/Shared/ui/Text-Header/Text-Header.tsx';
-import { CardsSlider } from 'src/Shared/ui/Slider/CardsSlider.tsx';
+import { CardsSlider } from 'src/Shared/ui/Slider/Cards-Slider.tsx';
 import { loadingTextPlaceHolder } from 'src/Shared/ui/loading-text-place-holder/loading-text-place-holder.ts';
 
 export const GetPointsCard = () => {
@@ -14,7 +14,7 @@ export const GetPointsCard = () => {
             <CardsSlider cardSize={'small'}
                          cards={cards}
                          cardType={'simple'}
-                         itemsToSlide={0}
+                         slidesPerGroup={0}
             />
         </div>
     );

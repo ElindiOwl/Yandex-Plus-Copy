@@ -1,0 +1,45 @@
+.prevSlideButton {
+  position: absolute;
+  top: 45%;
+  background: white;
+  border: none;
+  cursor: pointer;
+  left: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 500;
+  box-shadow: 0 0 10px -7px rgb(0, 0, 0);
+}
+
+.prevSlideButton:hover {
+  transform: scale(1.2);
+  transition: transform 0.1s ease-in-out;
+}
+
+.nextSlideButton {
+  position: absolute;
+  top: 45%;
+  background: white;
+  border: none;
+  cursor: pointer;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  z-index: 500;
+  box-shadow: 0 0 10px -7px rgb(0, 0, 0);
+}
+
+.nextSlideButton:hover {
+  transform: scale(1.2);
+  transition: transform 0.1s ease-in-out;
+}
+
+.nextSlideButton.hidden {
+  display: none;
+}
+
+.prevSlideButton.hidden {
+  display: none;
+}

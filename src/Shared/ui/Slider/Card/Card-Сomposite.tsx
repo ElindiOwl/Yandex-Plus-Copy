@@ -1,7 +1,7 @@
 import style from 'src/Shared/ui/Slider/Card/Card.module.scss';
 import { FC, forwardRef } from 'react';
 import { CardSliderTemplate } from '../../../../Entities/advertising/model/CardSliderTemplate';
-import { cardSizeVariants } from 'src/Shared/lib/Slider/cardSizeVariants';
+import { cardSizeVariants } from 'src/Shared/lib/Slider/card-Size-Variants.ts';
 
 export const CardComposite: FC<CardSliderTemplate> = forwardRef(({
                                                                      src,

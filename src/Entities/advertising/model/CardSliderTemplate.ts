@@ -1,4 +1,4 @@
-import { CARD_SIZE } from 'src/Shared/ui/Slider/CardsSlider';
+import { CARD_SIZE } from 'src/Shared/ui/Slider/Cards-Slider.tsx';
 
 export interface CardSliderTemplate {
     src: string;
