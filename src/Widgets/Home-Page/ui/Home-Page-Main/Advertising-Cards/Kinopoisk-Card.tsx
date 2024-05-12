@@ -15,6 +15,7 @@ export const KinopoiskCard = () => {
                          cards={cards}
                          cardType={'simple'}
                          slidesPerGroup={3}
+                         slidesPerView={4}
             />
         </div>
     );

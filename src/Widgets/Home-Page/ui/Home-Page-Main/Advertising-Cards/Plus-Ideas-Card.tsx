@@ -16,6 +16,7 @@ export const PlusIdeasCard = () => {
             <CardsSlider cardSize={'tall'}
                          cards={cards}
                          cardType={'simple'}
+                         slidesPerView={4}
             />
         </div>
     );

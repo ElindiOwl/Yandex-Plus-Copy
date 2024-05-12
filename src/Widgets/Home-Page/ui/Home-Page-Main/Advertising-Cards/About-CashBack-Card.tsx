@@ -24,6 +24,7 @@ export const AboutCashBackCard = () => {
                          cards={cards}
                          cardType={'simple'}
                          slidesPerGroup={2}
+                         slidesPerView={4}
             />
         </div>
     );

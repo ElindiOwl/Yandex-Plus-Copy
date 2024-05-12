@@ -14,7 +14,8 @@ export const GetPointsCard = () => {
             <CardsSlider cardSize={'small'}
                          cards={cards}
                          cardType={'simple'}
-                         slidesPerGroup={0}
+                         slidesPerGroup={1}
+                         slidesPerView={4}
             />
         </div>
     );

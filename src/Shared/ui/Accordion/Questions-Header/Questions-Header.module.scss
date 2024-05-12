@@ -1,0 +1,23 @@
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  height: 22px;
+}
+
+.headerContainer p {
+  padding-left: 0;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.headerContainer:hover {
+  color: #dc0000;
+}
+
+.expand__title_arrow {
+  transition: transform 0.2s ease-in-out;
+}
+
+.rotated {
+  transform: rotate(-180deg);
+}

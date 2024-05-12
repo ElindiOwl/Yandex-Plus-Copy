@@ -14,6 +14,7 @@ export const MusicCard = () => {
             <CardsSlider cardSize={'small'}
                          cards={cards}
                          cardType={'simple'}
+                         slidesPerView={4.7}
             />
         </div>
     );

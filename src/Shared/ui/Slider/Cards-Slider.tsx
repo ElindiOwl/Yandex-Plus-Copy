@@ -31,7 +31,7 @@ const cardsType = {
 export const CardsSlider: FC<SliderProps> = ({
                                                  cards = [],
                                                  slidesPerGroup = 1,
-                                                 slidesPerView = 4,
+                                                 slidesPerView,
                                                  cardSize,
                                                  cardType,
                                              }) => {
@@ -41,12 +41,16 @@ export const CardsSlider: FC<SliderProps> = ({
         <div className={style.slider}>
             <div className={style.sliderOverflow}>
                 <div className={style.sliderItems}>
-                    <Swiper
-                        modules={[Navigation, Pagination, Scrollbar, A11y]}
-                        spaceBetween={50}
-                        slidesPerView={slidesPerView}
-                        slidesPerGroup={slidesPerGroup}
-                        speed={700}
+                    <Swiper style={{ padding: '24px 0 24px 0' }}
+                            modules={[Navigation, Pagination, Scrollbar, A11y]}
+                            spaceBetween={1}
+                            slidesPerView={slidesPerView}
+                            slidesPerGroup={slidesPerGroup}
+                            allowTouchMove={true}
+                            autoHeight={false}
+                            speed={500}
+                            slidesOffsetBefore={24}
+                            slidesOffsetAfter={12}
                     >
                         {cards.map((data, i) => (
                             <SwiperSlide key={i}>
@@ -62,7 +66,6 @@ export const CardsSlider: FC<SliderProps> = ({
                     </Swiper>
                 </div>
             </div>
-
         </div>
     );
 };

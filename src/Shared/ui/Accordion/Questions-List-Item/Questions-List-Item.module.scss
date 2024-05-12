@@ -1,0 +1,13 @@
+.questions {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.questions__description {
+  display: block;
+  transition: 0.3s;;
+}
+
+.questions__description_invisible {
+  display: none;
+}

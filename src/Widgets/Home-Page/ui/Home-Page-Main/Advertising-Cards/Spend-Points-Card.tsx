@@ -17,6 +17,7 @@ export const SpendPointsCard = () => {
                          cards={cards}
                          cardType={'simple'}
                          slidesPerGroup={3}
+                         slidesPerView={4}
             />
         </div>
     );

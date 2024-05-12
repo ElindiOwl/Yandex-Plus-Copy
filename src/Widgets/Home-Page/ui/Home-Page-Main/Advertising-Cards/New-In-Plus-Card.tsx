@@ -14,7 +14,7 @@ export const NewInPlusCard = () => {
             <CardsSlider cardSize={'wide'}
                          cards={cards}
                          cardType={'composite'}
-                         slidesPerView={2}
+                         slidesPerView={2.15}
             />
         </div>
     );
