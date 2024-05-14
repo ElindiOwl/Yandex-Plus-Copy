@@ -1,7 +1,8 @@
-import { QuestionsHeader } from 'src/Shared/ui/Accordion/Questions-Header/Questions-Header.tsx';
-import { QuestionsDescription } from 'src/Shared/ui/Accordion/Questions-Description/Questions-Description.tsx';
+import { QuestionsHeader } from 'src/Entities/questions/ui/Questions-Header/Questions-Header.tsx';
+import { QuestionsDescription } from 'src/Entities/questions/ui/Questions-Description/Questions-Description.tsx';
 import React, { FC, useState } from 'react';
 import style from './Questions-List-Item.module.scss';
+import { cn } from 'src/Shared/lib';
 
 export interface QuestionsListProps {
     header: string;
@@ -19,10 +20,10 @@ export const QuestionsListItem: FC<QuestionsListProps> = ({ header, description 
         <div className={style.questions}>
             <QuestionsHeader text={header} onClick={headerClickHandler} />
             <div
-                className={`${style.questions__description} ${!isDescriptionVisible ? style.questions__description_invisible : ''}`}>
+                // className={`${style.questions__description} ${!isDescriptionVisible ? style.questions__description_invisible : ''}`}>
+                className={cn([style.questions__description], { [style.questions__description_invisible]: !isDescriptionVisible })}>
                 <QuestionsDescription text={description} />
             </div>
-            <hr />
         </div>
     );
 };

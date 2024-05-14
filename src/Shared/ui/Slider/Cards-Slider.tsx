@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { SliderButtons } from 'src/Shared/ui/Slide-Buttons/Slider-Buttons/Slider-Buttons.tsx';
+import { SliderButtons } from 'src/Shared/ui/Buttons/Slider-Buttons/Slider-Buttons.tsx';
 
 export type CARD_SIZE = 'tall' | 'small' | 'wide'
 export type CARD_TYPE = 'simple' | 'composite'

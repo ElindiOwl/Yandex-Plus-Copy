@@ -57,13 +57,15 @@ const SubscriptionOptions: React.FC<NextPaymentMapProps> = ({ displayCount, opti
                         </div>
                     </div>
                 </div>
-                <div className={`subPaymentOption ${activeOption === 'changePlan' ? 'active' : ''}`}>
+                <div className={`subPaymentOption ${activeOption === 'changePlan' ? 'changePlanItem__majorTag' : ''}`}>
                     {activeOption === 'changePlan' && <ChangePlan />}
                 </div>
-                <div className={`subPaymentOption ${activeOption === 'paymentHistory' ? 'active' : ''}`}>
+                <div
+                    className={`subPaymentOption ${activeOption === 'paymentHistory' ? 'changePlanItem__majorTag' : ''}`}>
                     {activeOption === 'paymentHistory' && <PaymentHistoryPaymentOption />}
                 </div>
-                <div className={`subPaymentOption ${activeOption === 'paymentMethod' ? 'active' : ''}`}>
+                <div
+                    className={`subPaymentOption ${activeOption === 'paymentMethod' ? 'changePlanItem__majorTag' : ''}`}>
                     {activeOption === 'paymentMethod' && <PaymentMethod />}
                 </div>
             </div>

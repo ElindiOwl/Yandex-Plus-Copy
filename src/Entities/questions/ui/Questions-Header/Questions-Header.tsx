@@ -1,5 +1,5 @@
 import { FC, useState } from 'react';
-import { QuestionsTextProps } from 'src/Shared/lib/Questions/questions-Interface.ts';
+import { QuestionsTextProps } from 'src/Shared/lib/questions-Interface.ts';
 import style from './Questions-Header.module.scss';
 
 interface QuestionsHeaderProps extends QuestionsTextProps {

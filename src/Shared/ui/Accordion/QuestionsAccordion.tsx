@@ -1,7 +1,7 @@
 import {
     QuestionsListItem,
-} from 'src/Shared/ui/Accordion/Questions-List-Item/Questions-List-Item.tsx';
-import { questionsMap } from 'src/Shared/ui/Accordion/Question-Map/questions-map.tsx';
+} from 'src/Features/ui/Questions-List-Item/Questions-List-Item.tsx';
+import { questionsMap } from 'src/Entities/questions/lib/questions-map.tsx';
 
 export const QuestionsAccordion = () => {
     return (

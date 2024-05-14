@@ -12,9 +12,6 @@ const SubscriptionPageHeader = () => {
                           fill='#fff'></path>
                 </svg>
             </div>
-            <div className='blankDivTopZoneSubDiv'>
-
-            </div>
             <div className='buttonDivSubControl'>
                 <button className='stopSubButtonSubControl'>Приостановить подписку</button>
             </div>

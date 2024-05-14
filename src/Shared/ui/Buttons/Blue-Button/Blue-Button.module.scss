@@ -1,0 +1,19 @@
+.blueButton {
+  height: 38px;
+  margin-top: 0;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background-color: rgb(63, 104, 249);
+  padding: 7px 40px 7px 40px;
+  font-size: 15px;
+  font-weight: 450;
+}
+
+.blueButton:hover {
+  background-color: rgb(39, 85, 248);
+}
+
+.blueButton:active {
+  background-color: rgb(13, 64, 247);
+}

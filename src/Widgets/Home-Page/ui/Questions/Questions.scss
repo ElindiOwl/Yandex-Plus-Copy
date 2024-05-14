@@ -7,10 +7,6 @@
   overflow: hidden;
 }
 
-.textDiv {
-  padding-bottom: 10px;
-}
-
 .h2Questions {
   display: flex;
   text-align: center;
@@ -31,5 +27,13 @@
   }
   .textDiv h2 {
     font-size: 30px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .h2Questions {
+    font-size: 20px;
+    line-height: 20px;
   }
 }

@@ -1,11 +1,17 @@
 .questions {
   max-width: 640px;
   margin: 0 auto;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.questions:last-child {
+  border-bottom: none;
 }
 
 .questions__description {
   display: block;
-  transition: 0.3s;;
 }
 
 .questions__description_invisible {

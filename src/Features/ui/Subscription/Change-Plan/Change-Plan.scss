@@ -112,7 +112,7 @@
   background-color: rgb(13, 64, 247);
 }
 
-.enhancedOneMonthPlanSubPayment {
+.changePlanItem {
   margin-top: 8px;
   background-color: #f5f7fa;
   padding: 16px;
@@ -122,24 +122,24 @@
   grid-template-rows: 23px 14px;
 }
 
-.enhancedOneMonthPlanSubPayment img {
+.changePlanItem img {
   grid-column: 1;
 }
 
-.enhancedOneMonthPlanSubPayment h6 {
+.changePlanItem h6 {
   grid-column: 2;
   font-size: 15px;
   font-weight: 400;
 }
 
-.enhancedOneMonthPlanSubPayment h5 {
+.changePlanItem h5 {
   grid-column: 2;
   font-size: 14px;
   font-weight: 400;
   color: rgb(109, 111, 120);
 }
 
-.enhancedOneMonthPlanSubPayment div {
+.changePlanItem div {
   grid-column: 3;
   grid-row: 1;
   margin-bottom: 7px;

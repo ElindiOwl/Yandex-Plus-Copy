@@ -1,39 +1,29 @@
 import './Change-Plan.scss';
-import OneMonthSub from '../../../../Shared/assets/Images/Subscription-Page-Images/OneMonthSub.png';
-import OneYearSub from '../../../../Shared/assets/Images/Subscription-Page-Images/OneYearSub.png';
+import OneMonthSub from 'src/Shared/assets/Images/Subscription-Page-Images/OneMonthSub.png';
+import OneYearSub from 'src/Shared/assets/Images/Subscription-Page-Images/OneYearSub.png';
+import { ChangePlanItem } from 'src/Entities/subscription/ui/Change-Plan-Item/Change-Plan-Item.tsx';
+import { useChangePlanItems } from 'src/Entities/subscription/model/use-change-plan-items.ts';
+import { CHANGE_PLAN_TYPE } from 'src/Entities/subscription/model/change-plan-items-types.ts';
+
+const changePlanImages: Record<CHANGE_PLAN_TYPE, string> = {
+    month: OneMonthSub,
+    year: OneYearSub,
+};
 
 const ChangePlan = () => {
+    const itemsData = useChangePlanItems();
+
     return (
         <div className='changePlanSubPayment'>
-            <div className='oneMonthPlanSubPayment'>
-                <img src={OneMonthSub} alt='One' height='40px' width='40px' />
-                <h6>Яндекс Плюс</h6>
-                <h5>299 ₽ в месяц</h5>
-                <div>
-                    <p>Активен</p>
-                </div>
-            </div>
-            <div className='oneYearPlanSubPayment'>
-                <img src={OneYearSub} alt='One' height='40px' width='40px' />
-                <h6>Плюс Больше кино на год</h6>
-                <h5>2 490 ₽ в первый год</h5>
-                <div>
-                    <p>-47%</p>
-                </div>
-                <h2 className='blankDivChangePlanSubPayment'></h2>
-                <button className='oneYearPlanSubPaymentButton'>
-                    Перейти
-                </button>
-            </div>
-            <div className='enhancedOneMonthPlanSubPayment'>
-                <img src={OneMonthSub} alt='One' height='40px' width='40px' />
-                <h6>Плюс с Амедиатекой</h6>
-                <h5>699 ₽ в месяц</h5>
-                <h2 className='blankDivChangePlanSubPayment'></h2>
-                <button className='enhancedOneMonthPlanSubPaymentButton'>
-                    Перейти
-                </button>
-            </div>
+            {itemsData.map((data) => (
+                <ChangePlanItem
+                    type={changePlanImages[data.type]}
+                    header={data.header}
+                    description={data.description}
+                    majorTagText={data.isActive ? 'Активен' : ''}
+                    minorTagText={data.discount}
+                />
+            ))}
         </div>
     );
 };

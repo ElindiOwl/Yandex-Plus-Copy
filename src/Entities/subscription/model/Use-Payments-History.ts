@@ -1,4 +1,4 @@
-import { getPaymentsHistory } from '../api/Get-Payments-History';
+import { getChangePlanItems } from '../api/Get-Payments-History';
 import { useEffect, useState } from 'react';
 import { PaymentHistory } from './Payment-History-Types';
 
@@ -8,7 +8,7 @@ export const usePaymentsHistory = () => {
 
     useEffect(() => {
         const fetchPaymentsHistory = async () => {
-            const paymentsHistoryDTO = await getPaymentsHistory();
+            const paymentsHistoryDTO = await getChangePlanItems();
             setPaymentsHistory(paymentsHistoryDTO);
         };
 

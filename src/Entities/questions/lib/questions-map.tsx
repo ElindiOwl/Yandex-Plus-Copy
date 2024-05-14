@@ -1,4 +1,4 @@
-import { QuestionsListProps } from 'src/Shared/ui/Accordion/Questions-List-Item/Questions-List-Item.tsx';
+import { QuestionsListProps } from 'src/Features/ui/Questions-List-Item/Questions-List-Item.tsx';
 
 type QuestionsMap = { [key: string]: QuestionsListProps };
 

@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { QuestionsTextProps } from 'src/Shared/lib/Questions/questions-Interface.ts';
+import { QuestionsTextProps } from 'src/Shared/lib/questions-Interface.ts';
 import style from './Questions-Description.module.scss';
 
 
