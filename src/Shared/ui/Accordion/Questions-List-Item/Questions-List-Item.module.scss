@@ -1,4 +1,4 @@
-.questions {
+.accordion {
   max-width: 640px;
   margin: 0 auto;
   border-bottom: 1px solid #dadada;
@@ -6,14 +6,14 @@
   padding-top: 20px;
 }
 
-.questions:last-child {
+.accordion:last-child {
   border-bottom: none;
 }
 
-.questions__description {
+.accordion__description {
   display: block;
 }
 
-.questions__description_invisible {
+.accordion__description_invisible {
   display: none;
 }

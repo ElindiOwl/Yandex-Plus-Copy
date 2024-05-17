@@ -1,12 +1,12 @@
 import { FC, useState } from 'react';
-import { QuestionsTextProps } from 'src/Shared/lib/questions-Interface.ts';
-import style from './Questions-Header.module.scss';
+import { AccordionTextProps } from 'src/Shared/lib/accordion-Interface.ts';
+import style from './Accordion-Header.module.scss';
 
-interface QuestionsHeaderProps extends QuestionsTextProps {
+interface AccordionHeaderProps extends AccordionTextProps {
     onClick: () => void;
 }
 
-export const QuestionsHeader: FC<QuestionsHeaderProps> = ({ text, onClick }) => {
+export const AccordionHeader: FC<AccordionHeaderProps> = ({ text, onClick }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const handleClick = () => {

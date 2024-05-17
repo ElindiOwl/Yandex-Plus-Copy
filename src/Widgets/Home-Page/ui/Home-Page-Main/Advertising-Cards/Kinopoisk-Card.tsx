@@ -9,7 +9,7 @@ export const KinopoiskCard = () => {
     const isLoading = loadingTextPlaceHolder(cards);
 
     return isLoading ? 'Loading...' : (
-        <div className={style.sportSeasonCard}>
+        <div className={style.genericCard}>
             <TextHeader header={'Смотрите на Кинопоиске'} description={''} />
             <CardsSlider cardSize={'tall'}
                          cards={cards}

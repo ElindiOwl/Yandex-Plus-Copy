@@ -1,5 +1,6 @@
 import './Questions.scss';
-import { QuestionsAccordion } from 'src/Shared/ui/Accordion/QuestionsAccordion.tsx';
+import { QuestionsAccordion } from 'src/Features/ui/Questions/Questions-Accordion.tsx';
+import { questionsMap } from 'src/Entities/questions/lib/questions-map.tsx';
 
 const Questions = () => {
 
@@ -8,7 +9,7 @@ const Questions = () => {
             <div className='textDiv'>
                 <h2 className='h2Questions'>Остались вопросы? <br />Сейчас ответим</h2>
             </div>
-            <QuestionsAccordion />
+            <QuestionsAccordion mapToUse={questionsMap} />
         </div>
     );
 };

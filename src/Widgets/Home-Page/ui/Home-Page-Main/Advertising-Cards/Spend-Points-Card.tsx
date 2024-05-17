@@ -11,7 +11,7 @@ export const SpendPointsCard = () => {
     const isLoading = loadingTextPlaceHolder(cards);
 
     return isLoading ? 'Loading...' : (
-        <div className={style.sportSeasonCard}>
+        <div className={style.genericCard}>
             <TextHeader header={'Как потратить баллы'} description={''} />
             <CardsSlider cardSize={'tall'}
                          cards={cards}

@@ -1,5 +1,10 @@
-.sportSeasonCard {
+.container {
+  margin-top: 24px;
+}
+
+.genericCard {
   border-radius: 20px;
   background-color: white;
   padding-top: 24px;
+  overflow: hidden;
 }

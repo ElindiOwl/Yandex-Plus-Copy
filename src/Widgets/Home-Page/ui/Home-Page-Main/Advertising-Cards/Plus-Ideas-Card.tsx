@@ -11,13 +11,15 @@ export const PlusIdeasCard = () => {
     const isLoading = loadingTextPlaceHolder(cards);
 
     return isLoading ? 'Loading...' : (
-        <div className={style.sportSeasonCard}>
-            <TextHeader header={'Идеи, чем заняться в Плюсе'} description={'Собрали их для вас'} />
-            <CardsSlider cardSize={'tall'}
-                         cards={cards}
-                         cardType={'simple'}
-                         slidesPerView={4}
-            />
+        <div className={style.container}>
+            <div className={style.genericCard}>
+                <TextHeader header={'Идеи, чем заняться в Плюсе'} description={'Собрали их для вас'} />
+                <CardsSlider cardSize={'tall'}
+                             cards={cards}
+                             cardType={'simple'}
+                             slidesPerView={4}
+                />
+            </div>
         </div>
     );
 };

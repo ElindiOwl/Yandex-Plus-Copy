@@ -6,6 +6,8 @@ import { useSwiperState } from 'src/Shared/lib/Slider/use-Swiper-State.ts';
 export const SliderButtons = () => {
     const { swiper, state: { isBeginning, isEnd } } = useSwiperState();
 
+    console.log(swiper);
+
     const prevSlideHandler = () => {
         swiper.slidePrev();
     };

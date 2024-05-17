@@ -5,7 +5,7 @@ import { SpendPointsCard } from 'src/Widgets/Home-Page/ui/Home-Page-Main/Adverti
 
 const CashBackBlock = () => {
     return (
-        <div className={style.PointsCardDiv}>
+        <div className={style.cashBackBlock}>
             <AboutCashBackCard />
             <GetPointsCard />
             <SpendPointsCard />

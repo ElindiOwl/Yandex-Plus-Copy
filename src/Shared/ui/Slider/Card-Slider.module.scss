@@ -1,27 +1,21 @@
 .slider {
+  position: relative;
   background-color: white;
   border-radius: 20px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.05);
-  position: relative;
-  overflow: hidden;
-  margin-bottom: 24px;
 }
 
-.sliderOverflow {
-  overflow: hidden;
+.slider__swiper {
+  min-width: 1000px;
 }
 
-.sliderItems {
-  transition: all 0.3s ease-in-out;
-  position: relative;
-  display: flex;
-  justify-content: space-between;
+.slider__slide {
+  padding: 24px 0;
 }
 
 
-/*
 @media screen and (max-width: 800px) {
   .sliderOverflow {
     padding: 15px;
   }
-}*/
+}

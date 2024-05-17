@@ -1,5 +1,5 @@
 import React from 'react';
 
-export interface QuestionsTextProps {
+export interface AccordionTextProps {
     text: string | React.ReactNode;
 }

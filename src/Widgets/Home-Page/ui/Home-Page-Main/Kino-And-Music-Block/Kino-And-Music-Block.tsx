@@ -5,7 +5,7 @@ import { MusicCard } from 'src/Widgets/Home-Page/ui/Home-Page-Main/Advertising-C
 
 const KinoAndMusicBlock = () => {
     return (
-        <div className={style.MainKinoMusicDiv}>
+        <div className={style.MainKinoMusicBlock}>
             <KinopoiskCard />
             <MusicCard />
         </div>

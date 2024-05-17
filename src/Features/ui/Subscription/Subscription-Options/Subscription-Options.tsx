@@ -27,49 +27,56 @@ const SubscriptionOptions: React.FC<NextPaymentMapProps> = ({ displayCount, opti
     const limitedPayments = displayCount ? nextPaymentInfo.slice(0, displayCount) : nextPaymentInfo;
 
     return (
-        limitedPayments.map((payment, index) => (
-            <div>
-                <div key={index} className='subPaymentDivSubControl'>
-                    <div>
-                        <SubscriptionHeader
-                            price={payment.subscriptionPrice}
-                            date={`${new Date(payment.paymentDate).getDate()} ${getMonth(new Date(payment.paymentDate))}`}
-                        />
-                        <div className='buttonsSubPaymentsControl'>
-                            <button
-                                onClick={() => handleToggleOption('changePlan')}
-                                className={activeOption === 'changePlan' ? 'activeButton' : 'inactiveButton'}
-                            >
-                                Сменить план
-                            </button>
-                            <button
-                                onClick={() => handleToggleOption('paymentHistory')}
-                                className={activeOption === 'paymentHistory' ? 'activeButton' : 'inactiveButton'}
-                            >
-                                История списаний
-                            </button>
-                            <button
-                                onClick={() => handleToggleOption('paymentMethod')}
-                                className={activeOption === 'paymentMethod' ? 'activeButton' : 'inactiveButton'}
-                            >
-                                Способ оплаты
-                            </button>
+        limitedPayments.map((payment, index) => {
+            const paymentDate = new Date(payment.paymentDate);
+            paymentDate.setMonth(paymentDate.getMonth() + 1);
+            const formattedDate = `${paymentDate.getDate()} ${getMonth(paymentDate)}`;
+
+            return (
+                <div>
+                    <div key={index} className='subPaymentDivSubControl'>
+                        <div>
+                            <SubscriptionHeader
+                                price={payment.subscriptionPrice}
+                                date={formattedDate}
+                            />
+                            <div className='buttonsSubPaymentsControl'>
+                                <button
+                                    onClick={() => handleToggleOption('changePlan')}
+                                    className={activeOption === 'changePlan' ? 'activeButton' : 'inactiveButton'}
+                                >
+                                    Сменить план
+                                </button>
+                                <button
+                                    onClick={() => handleToggleOption('paymentHistory')}
+                                    className={activeOption === 'paymentHistory' ? 'activeButton' : 'inactiveButton'}
+                                >
+                                    История списаний
+                                </button>
+                                <button
+                                    onClick={() => handleToggleOption('paymentMethod')}
+                                    className={activeOption === 'paymentMethod' ? 'activeButton' : 'inactiveButton'}
+                                >
+                                    Способ оплаты
+                                </button>
+                            </div>
                         </div>
                     </div>
+                    <div
+                        className={`subPaymentOption ${activeOption === 'changePlan' ? 'changePlanItem__majorTag' : ''}`}>
+                        {activeOption === 'changePlan' && <ChangePlan />}
+                    </div>
+                    <div
+                        className={`subPaymentOption ${activeOption === 'paymentHistory' ? 'changePlanItem__majorTag' : ''}`}>
+                        {activeOption === 'paymentHistory' && <PaymentHistoryPaymentOption />}
+                    </div>
+                    <div
+                        className={`subPaymentOption ${activeOption === 'paymentMethod' ? 'changePlanItem__majorTag' : ''}`}>
+                        {activeOption === 'paymentMethod' && <PaymentMethod />}
+                    </div>
                 </div>
-                <div className={`subPaymentOption ${activeOption === 'changePlan' ? 'changePlanItem__majorTag' : ''}`}>
-                    {activeOption === 'changePlan' && <ChangePlan />}
-                </div>
-                <div
-                    className={`subPaymentOption ${activeOption === 'paymentHistory' ? 'changePlanItem__majorTag' : ''}`}>
-                    {activeOption === 'paymentHistory' && <PaymentHistoryPaymentOption />}
-                </div>
-                <div
-                    className={`subPaymentOption ${activeOption === 'paymentMethod' ? 'changePlanItem__majorTag' : ''}`}>
-                    {activeOption === 'paymentMethod' && <PaymentMethod />}
-                </div>
-            </div>
-        ))
+            );
+        })
     );
 };
 

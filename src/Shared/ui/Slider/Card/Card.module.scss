@@ -6,6 +6,7 @@
   align-self: center;
   background-size: cover;
   background-position: center;
+  transition: transform 0.1s ease-in-out;
   background-color: rgb(241, 243, 245);
 }
 
@@ -54,7 +55,6 @@
 
 .cardSetButton:hover {
   transform: scale(1.05);
-  transition: transform 0.1s ease-in-out;
 }
 
 

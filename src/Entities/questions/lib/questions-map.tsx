@@ -1,8 +1,7 @@
-import { QuestionsListProps } from 'src/Features/ui/Questions-List-Item/Questions-List-Item.tsx';
+import { AccordionMap } from 'src/Shared/lib';
 
-type QuestionsMap = { [key: string]: QuestionsListProps };
 
-export const questionsMap: QuestionsMap = {
+export const questionsMap: AccordionMap = {
     'question1': {
         header: 'Что входит в мою подписку Яндекс Плюс?',
         description:

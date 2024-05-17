@@ -9,7 +9,7 @@ export const MusicCard = () => {
     const isLoading = loadingTextPlaceHolder(cards);
 
     return isLoading ? 'Loading...' : (
-        <div className={style.sportSeasonCard}>
+        <div className={style.genericCard}>
             <TextHeader header={'Слушайте на Яндекс Музыке'} description={''} />
             <CardsSlider cardSize={'small'}
                          cards={cards}

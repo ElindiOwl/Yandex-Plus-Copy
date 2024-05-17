@@ -9,13 +9,15 @@ export const NewInPlusCard = () => {
     const isLoading = loadingTextPlaceHolder(cards);
 
     return isLoading ? 'Loading...' : (
-        <div className={style.sportSeasonCard}>
-            <TextHeader header={'Новое в Плюсе'} description={''} />
-            <CardsSlider cardSize={'wide'}
-                         cards={cards}
-                         cardType={'composite'}
-                         slidesPerView={2.15}
-            />
+        <div className={style.container}>
+            <div className={style.genericCard}>
+                <TextHeader header={'Новое в Плюсе'} description={''} />
+                <CardsSlider cardSize={'wide'}
+                             cards={cards}
+                             cardType={'composite'}
+                             slidesPerView={2.15}
+                />
+            </div>
         </div>
     );
 };

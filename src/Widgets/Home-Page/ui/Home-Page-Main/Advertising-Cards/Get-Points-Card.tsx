@@ -9,7 +9,7 @@ export const GetPointsCard = () => {
     const isLoading = loadingTextPlaceHolder(cards);
 
     return isLoading ? 'Loading...' : (
-        <div className={style.sportSeasonCard}>
+        <div className={style.genericCard}>
             <TextHeader header={'Как ещё получить баллы'} description={''} />
             <CardsSlider cardSize={'small'}
                          cards={cards}

@@ -7,7 +7,7 @@ const PaymentMethod = () => {
     return (
         <div className='paymentMethodSubPayment'>
             <div className='cardListSubPayment'>
-                <p>puck</p>
+                <p>STAND BY</p>
             </div>
             <div className='activatedSubPayment'>
                 <NextPayment displayCount={1} />

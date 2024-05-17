@@ -2,6 +2,8 @@ import './Header-Menu.scss';
 import { Squash as Hamburger } from 'hamburger-react';
 import { NavDropdown, Accordion } from 'react-bootstrap';
 import { useMenu } from 'src/Shared/lib/useMenu';
+import { QuestionsAccordion } from 'src/Features/ui/Questions/Questions-Accordion.tsx';
+import { menuAccordionMap } from 'src/Entities/header/lib/menu-accordion-map.tsx';
 
 export const HeaderMenu = () => {
 
@@ -46,6 +48,8 @@ export const HeaderMenu = () => {
                 }
                     Подарить Плюс</NavDropdown.Item>
                 <br />
+                <QuestionsAccordion mapToUse={menuAccordionMap} />
+
                 <Accordion className='Accordion'>
                     <Accordion.Item eventKey='0'>
                         <Accordion.Header>{

@@ -12,7 +12,7 @@ export const AboutCashBackCard = () => {
     const isLoading = loadingTextPlaceHolder(cards);
 
     return isLoading ? 'Loading...' : (
-        <div className={style.sportSeasonCard}>
+        <div className={style.genericCard}>
             <TextHeader
                 header={
                     <>

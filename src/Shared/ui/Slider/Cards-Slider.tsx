@@ -39,33 +39,29 @@ export const CardsSlider: FC<SliderProps> = ({
 
     return (
         <div className={style.slider}>
-            <div className={style.sliderOverflow}>
-                <div className={style.sliderItems}>
-                    <Swiper style={{ padding: '24px 0 24px 0' }}
-                            modules={[Navigation, Pagination, Scrollbar, A11y]}
-                            spaceBetween={1}
-                            slidesPerView={slidesPerView}
-                            slidesPerGroup={slidesPerGroup}
-                            allowTouchMove={true}
-                            autoHeight={false}
-                            speed={500}
-                            slidesOffsetBefore={24}
-                            slidesOffsetAfter={12}
-                    >
-                        {cards.map((data, i) => (
-                            <SwiperSlide key={i}>
-                                <Card
-                                    src={data.src}
-                                    cardSize={cardSize}
-                                    sliderHeader={data.sliderHeader || ''}
-                                    sliderDescription={data.sliderDescription || ''}
-                                />
-                            </SwiperSlide>
-                        ))}
-                        <SliderButtons />
-                    </Swiper>
-                </div>
-            </div>
+            <Swiper className={style.slider__swiper}
+                    modules={[Navigation, Pagination, Scrollbar, A11y]}
+                    spaceBetween={1}
+                    slidesPerView={slidesPerView}
+                    slidesPerGroup={slidesPerGroup}
+                    allowTouchMove={true}
+                    autoHeight={false}
+                    speed={500}
+                    slidesOffsetBefore={24}
+                    slidesOffsetAfter={12}
+            >
+                {cards.map((data, i) => (
+                    <SwiperSlide className={style.slider__slide} key={i}>
+                        <Card
+                            src={data.src}
+                            cardSize={cardSize}
+                            sliderHeader={data.sliderHeader || ''}
+                            sliderDescription={data.sliderDescription || ''}
+                        />
+                    </SwiperSlide>
+                ))}
+                <SliderButtons />
+            </Swiper>
         </div>
     );
 };

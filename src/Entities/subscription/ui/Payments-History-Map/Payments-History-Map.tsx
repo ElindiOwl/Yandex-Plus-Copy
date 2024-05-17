@@ -2,8 +2,8 @@ import './Payments-History-Map.scss';
 import { getMonth } from 'src/Shared/lib/getMonth.tsx';
 import { usePaymentsHistory } from 'src/Entities/subscription/model/Use-Payments-History.ts';
 import { getNominativeCaseMonth } from 'src/Shared/lib/getNominativeCaseMonth.ts';
-import Payment
-    from 'src/Entities/subscription/model/Payment-History-List-Item/Payment-History-List-Item.tsx';
+import { Payment } from 'src/Entities/subscription/model/Payment-History-List-Item/Payment-History-List-Item.tsx';
+
 
 interface PaymentItemProps {
     paymentDate: string;
