@@ -1,4 +1,4 @@
-.questionsCardDiv {
+.questions {
   background-color: white;
   border-radius: 20px;
   padding: 60px;
@@ -8,7 +8,7 @@
   margin-top: 24px;
 }
 
-.h2Questions {
+.questions__text {
   display: flex;
   text-align: center;
   justify-content: center;
@@ -17,23 +17,35 @@
   line-height: 35px;
 }
 
+.questions__accordion {
+  max-width: 640px;
+  margin: 0 auto;
+  border-bottom: 1px solid #dadada;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+.questions__accordion:last-child {
+  border-bottom: none;
+}
+
 
 @media screen and (max-width: 800px) {
-  .questionsCardDiv {
+  .questions {
     padding: 20px;
   }
-  .textDiv {
+  .questions__textArea {
     display: flex;
     justify-content: center;
   }
-  .textDiv h2 {
+  .questions__text {
     font-size: 30px;
     line-height: 30px;
   }
 }
 
 @media screen and (max-width: 1200px) {
-  .h2Questions {
+  .questions__text {
     font-size: 20px;
     line-height: 20px;
   }

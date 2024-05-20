@@ -1,10 +1,11 @@
 import { AccordionMap } from 'src/Shared/lib';
+import style from './menu-accordion-map.module.scss';
 
 
 export const menuAccordionMap: AccordionMap = {
     'option1': {
         header:
-            <div style={{ backgroundColor: 'black' }}>
+            <div className={style.header}>
                 <img
                     src='https://avatars.mds.yandex.net/get-media-infra/3502168/46bc2060-4e2c-4412-b12a-2349af48a2a0/orig'
                     alt='media'
@@ -13,7 +14,7 @@ export const menuAccordionMap: AccordionMap = {
                 <p>Устройства по подписке</p>
             </div>,
         description:
-            <p>
+            <p className={style.description}>
                 <a href='https://market.yandex.ru/product--yandex-stantsiia-2-umnaia-kolonka-s-alisoi/1488561450?cpa=1&sku=101763961821&offerid=Vlo_1Ses_qqnrC5SBuElog&utm_source=plus&utm_medium=menu_burger&utm_campaign=MSCAMP-24&utm_content=upmenu_ver3&clid=1650'
                 >Станция 2</a>
                 <a href='https://market.yandex.ru/product--umnaia-kolonka-yandex-stantsiia-maks-s-zigbee/1792604739?sku=101951359744&utm_source=plus&utm_medium=menu_burger&utm_campaign=MSCAMP-24&utm_content=upmenu_ver3&clid=1650&skuId=101951359744&_redirectCount=1'
@@ -30,7 +31,7 @@ export const menuAccordionMap: AccordionMap = {
     },
     'option2': {
         header:
-            <div>
+            <div className={style.header}>
                 <img
                     src='https://avatars.mds.yandex.net/get-media-infra/3601332/5f14d169-3c33-4214-92c7-acf11e72c7a8/orig'
                     alt='media'
@@ -39,6 +40,8 @@ export const menuAccordionMap: AccordionMap = {
                 <p>Опции от партнеров</p>
             </div>,
         description:
-            <a href='/x5Club'>Покупки с Пакетом от X5</a>,
+            <p className={style.description}>
+                <a href='/x5Club'>Покупки с Пакетом от X5</a>
+            </p>,
     },
 };

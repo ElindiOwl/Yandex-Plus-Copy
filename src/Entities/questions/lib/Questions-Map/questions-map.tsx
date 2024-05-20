@@ -1,19 +1,22 @@
 import { AccordionMap } from 'src/Shared/lib';
+import style from './questions-map.module.scss';
 
 
 export const questionsMap: AccordionMap = {
     'question1': {
-        header: 'Что входит в мою подписку Яндекс Плюс?',
+        header: <p className={style.header}>Что входит в мою подписку Яндекс Плюс?</p>,
         description:
-            <p>В вашу подписку входят треки и подкасты на Яндекс Музыке, фильмы и сериалы на Кинопоиске, а ещё
+            <p className={style.description}>В вашу подписку входят треки и подкасты на Яндекс Музыке, фильмы и сериалы
+                на Кинопоиске, а ещё
                 баллы Плюса. Баллы можно получать при заказах в <a
                     href='https://yandex.ru/support/plus-ru/cashback.html#services/'>сервисах Яндекса</a> и не только.
             </p>,
     },
     'question2': {
-        header: 'Что такое баллы Плюса, и как их получать?',
+        header: <p className={style.header}>Что такое баллы Плюса, и как их получать?</p>,
         description:
-            <p> Если коротко, то 1 балл = 1 ₽ скидки в сервисах Яндекса. Чтобы получать баллы, просто
+            <p className={style.description}> Если коротко, то 1 балл = 1 ₽ скидки в сервисах Яндекса. Чтобы получать
+                баллы, просто
                 пользуйтесь сервисами как обычно:
                 <br />
                 <br />
@@ -42,9 +45,10 @@ export const questionsMap: AccordionMap = {
             </p>,
     },
     'question3': {
-        header: 'Где и как тратить баллы Плюса?',
+        header: <p className={style.header}>Где и как тратить баллы Плюса?</p>,
         description:
-            <p>Баллы можно тратить в сервисах Яндекса. Просто выбирайте «Списать баллы» при оформлении
+            <p className={style.description}>Баллы можно тратить в сервисах Яндекса. Просто выбирайте «Списать баллы»
+                при оформлении
                 заказа в
                 Яндекс Go, Путешествиях, Драйве, на Маркете, Кинопоиске, Яндекс Афише, Яндекс Заправках.
                 <br />
@@ -62,9 +66,9 @@ export const questionsMap: AccordionMap = {
             </p>,
     },
     'question4': {
-        header: 'Как получать дополнительный кешбэк баллами с Яндекс Пэй?',
+        header: <p className={style.header}>Как получать дополнительный кешбэк баллами с Яндекс Пэй?</p>,
         description:
-            <p> Есть 2 способа:
+            <p className={style.description}> Есть 2 способа:
                 <br />
                 <br />
                 — оформите карту Пэй и расплачивайтесь ею онлайн и офлайн. Подробнее <a
@@ -81,9 +85,9 @@ export const questionsMap: AccordionMap = {
             </p>,
     },
     'question5': {
-        header: ' Как отменить подписку? И можно ли остановить её на время?',
+        header: <p className={style.header}>Как отменить подписку? И можно ли остановить её на время?</p>,
         description:
-            <p> Если вам пока не нужен Плюс, подписку можно отменить или приостановить.
+            <p className={style.description}> Если вам пока не нужен Плюс, подписку можно отменить или приостановить.
                 <br />
                 <b>Про приостановку</b>
                 <br />
@@ -117,9 +121,10 @@ export const questionsMap: AccordionMap = {
             </p>,
     },
     'question6': {
-        header: 'У меня списались деньги, но преимущества Плюса недоступны. Что делать?',
+        header: <p className={style.header}>У меня списались деньги, но преимущества Плюса недоступны. Что делать?</p>,
         description:
-            <p> Убедитесь, что вы заходите в сервисы Яндекса (Кинопоиск, Музыка, Яндекс Go и другие)
+            <p className={style.description}> Убедитесь, что вы заходите в сервисы Яндекса (Кинопоиск, Музыка, Яндекс Go
+                и другие)
                 <br />
                 с тем же логином, на который оформлена подписка.
                 <br />
@@ -132,9 +137,10 @@ export const questionsMap: AccordionMap = {
             </p>,
     },
     'question7': {
-        header: ' Как выгоднее всего купить подписку?',
+        header: <p className={style.header}>Как выгоднее всего купить подписку?</p>,
         description:
-            <p> Подключите Яндекс Плюс Больше кино на год — так получится дешевле, чем при ежемесячной
+            <p className={style.description}> Подключите Яндекс Плюс Больше кино на год — так получится дешевле, чем при
+                ежемесячной
                 оплате, а
                 ещё можно не думать об оплате каждый месяц. Яндекс Плюс Больше кино — это тот же Плюс,
                 только с
@@ -142,9 +148,10 @@ export const questionsMap: AccordionMap = {
             </p>,
     },
     'question8': {
-        header: ' Что такое Плюс Дейли и как туда попасть?',
+        header: <p className={style.header}>Что такое Плюс Дейли и как туда попасть?</p>,
         description:
-            <p> В Плюс Дейли вы получаете подарки за то, что пользуетесь сервисами Яндекса.
+            <p className={style.description}> В Плюс Дейли вы получаете подарки за то, что пользуетесь сервисами
+                Яндекса.
                 <br />
                 Как это работает: получаете звездочки за действия в сервисах, набираете их нужное количество
                 и
@@ -154,9 +161,9 @@ export const questionsMap: AccordionMap = {
             </p>,
     },
     'question9': {
-        header: ' Что такое Плюс Сити?',
+        header: <p className={style.header}>Что такое Плюс Сити?</p>,
         description:
-            <p> Плюс Сити — это игра для мобильных устройств на базе <a
+            <p className={style.description}> Плюс Сити — это игра для мобильных устройств на базе <a
                 href='https://apps.apple.com/ru/app/%D0%BF%D0%BB%D1%8E%D1%81-%D1%81%D0%B8%D1%82%D0%B8-%D1%81%D0%B8%D0%BC%D1%83%D0%BB%D1%8F%D1%82%D0%BE%D1%80-%D0%B3%D0%BE%D1%80%D0%BE%D0%B4%D0%B0/id1621479286#services'>
                 iOS</a> и <a
                 href='https://play.google.com/store/apps/details?id=com.yandex.mobile.plus.game.city&hl=ru&gl=US&pli=1#services'>

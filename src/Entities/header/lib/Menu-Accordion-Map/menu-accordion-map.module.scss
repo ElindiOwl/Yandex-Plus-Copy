@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.header p {
+  margin: 0;
+}
+
+.description {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0 0 0;
+}
+
+.description a {
+  margin: 0 0 0 25px;
+  padding: 5px 0 5px 10px;
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.description a:hover {
+  background-color: #edf0f1;
+  border-radius: 10px;
+}

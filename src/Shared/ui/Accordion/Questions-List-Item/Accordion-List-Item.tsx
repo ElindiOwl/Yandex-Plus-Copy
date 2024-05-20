@@ -7,9 +7,16 @@ import { cn } from 'src/Shared/lib';
 export interface AccordionListProps {
     header: string | React.ReactNode;
     description: string | React.ReactNode;
+    containerClassName?: string;
+    isHoverEffect: boolean;
 }
 
-export const AccordionListItem: FC<AccordionListProps> = ({ header, description }) => {
+export const AccordionListItem: FC<AccordionListProps> = ({
+                                                              header,
+                                                              description,
+                                                              containerClassName = '',
+                                                              isHoverEffect,
+                                                          }) => {
     const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
 
     const headerClickHandler = () => {
@@ -17,8 +24,8 @@ export const AccordionListItem: FC<AccordionListProps> = ({ header, description 
     };
 
     return (
-        <div className={style.accordion}>
-            <AccordionHeader text={header} onClick={headerClickHandler} />
+        <div className={cn([style.accordion, containerClassName])}>
+            <AccordionHeader text={header} onClick={headerClickHandler} isHoverEffect={isHoverEffect} />
             <div
                 // className={`${style.questions__description} ${!isDescriptionVisible ? style.questions__description_invisible : ''}`}>
                 className={cn([style.accordion__description], { [style.accordion__description_invisible]: !isDescriptionVisible })}>
