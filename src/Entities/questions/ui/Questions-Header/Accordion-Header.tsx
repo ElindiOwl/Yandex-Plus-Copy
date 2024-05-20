@@ -6,9 +6,15 @@ import { cn } from 'src/Shared/lib';
 interface AccordionHeaderProps extends AccordionTextProps {
     onClick: () => void;
     isHoverEffect: boolean;
+    headerContainerClassName: string;
 }
 
-export const AccordionHeader: FC<AccordionHeaderProps> = ({ text, onClick, isHoverEffect }) => {
+export const AccordionHeader: FC<AccordionHeaderProps> = ({
+                                                              text,
+                                                              onClick,
+                                                              isHoverEffect,
+                                                              headerContainerClassName,
+                                                          }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
     const handleClick = () => {
@@ -17,8 +23,9 @@ export const AccordionHeader: FC<AccordionHeaderProps> = ({ text, onClick, isHov
     };
 
     return (
-        <div className={cn([style.headerContainer], { [style.headerContainer_hoverEffect]: isHoverEffect })}
-             onClick={handleClick}>
+        <div
+            className={cn([style.headerContainer, headerContainerClassName], { [style.headerContainer_hoverEffect]: isHoverEffect })}
+            onClick={handleClick}>
             <p>{text}</p>
             <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 8' fill='none' stroke='currentColor'
                  className={`${style.expand__title_arrow} ${isExpanded ? style.rotated : ''}`} width='15'

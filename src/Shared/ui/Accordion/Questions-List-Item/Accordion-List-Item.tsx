@@ -8,6 +8,7 @@ export interface AccordionListProps {
     header: string | React.ReactNode;
     description: string | React.ReactNode;
     containerClassName?: string;
+    headerContainerClassName: string;
     isHoverEffect: boolean;
 }
 
@@ -15,6 +16,7 @@ export const AccordionListItem: FC<AccordionListProps> = ({
                                                               header,
                                                               description,
                                                               containerClassName = '',
+                                                              headerContainerClassName,
                                                               isHoverEffect,
                                                           }) => {
     const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
@@ -25,7 +27,8 @@ export const AccordionListItem: FC<AccordionListProps> = ({
 
     return (
         <div className={cn([style.accordion, containerClassName])}>
-            <AccordionHeader text={header} onClick={headerClickHandler} isHoverEffect={isHoverEffect} />
+            <AccordionHeader text={header} onClick={headerClickHandler} isHoverEffect={isHoverEffect}
+                             headerContainerClassName={headerContainerClassName} />
             <div
                 // className={`${style.questions__description} ${!isDescriptionVisible ? style.questions__description_invisible : ''}`}>
                 className={cn([style.accordion__description], { [style.accordion__description_invisible]: !isDescriptionVisible })}>

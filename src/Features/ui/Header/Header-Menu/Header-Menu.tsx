@@ -1,6 +1,6 @@
 import style from './Header-Menu.module.scss';
 import { Squash as Hamburger } from 'hamburger-react';
-import { QuestionsAccordion } from 'src/Features/ui/Questions/Questions-Accordion.tsx';
+import { CustomAccordion } from 'src/Shared/ui/Accordion/Custom-Accordion/Custom-Accordion.tsx';
 import { menuAccordionMap } from 'src/Entities/header/lib/Menu-Accordion-Map/menu-accordion-map.tsx';
 import { useEffect, useRef, useState } from 'react';
 
@@ -66,7 +66,8 @@ export const HeaderMenu: React.FC = () => {
                             Подарить Плюс
                         </a>
                     </div>
-                    <QuestionsAccordion mapToUse={menuAccordionMap} containerClassName={style.headerMenu__accordion} />
+                    <CustomAccordion mapToUse={menuAccordionMap} containerClassName={style.headerMenu__accordion}
+                                     headerContainerClassName={style.headerMenu__headerContainer} />
                     <div className={style.headerMenu__menuItem}>
                         <a href='/allOptions'>
                             <img

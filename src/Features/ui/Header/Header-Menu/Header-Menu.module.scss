@@ -65,6 +65,13 @@ p {
   padding: 7px 12px;
 }
 
+.headerMenu__headerContainer {
+  display: flex;
+  justify-content: left;
+  height: 22px;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 800px) {
   .headerMenu__menuWord {
     display: none;
