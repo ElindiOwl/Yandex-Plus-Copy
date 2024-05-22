@@ -17,6 +17,11 @@
   border: none;
 }
 
+.portraitButton img {
+  height: 100%;
+  width: 45px;
+}
+
 .exitButton button {
   padding: 10px;
   position: relative;
@@ -39,10 +44,15 @@
 }
 
 .headerPanel {
+  display: flex;
+  justify-content: space-between;
   height: 10px;
 }
 
 .headerContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   line-height: 20px;
   padding-bottom: 20px;
 }
@@ -55,12 +65,46 @@
   color: gray;
 }
 
+.headerContent img {
+  height: 100%;
+  width: 50px;
+}
+
+.headerPortraitBottomButtons {
+  margin-top: 15px;
+}
+
 .headerPortraitBottomButtons .dropdown-item {
   padding-left: 0;
 }
 
 .headerPortraitBottomButtons svg {
   margin-right: 20px;
+}
+
+
+.dropDownItem {
+  font-size: 17px;
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  padding: 0 12px;
+}
+
+.dropDownItem:hover {
+  background-color: #f0f1f5;
+  border-radius: 10px;
+}
+
+.dropDownItem a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+
+.dropDownItem img {
+  margin-right: 10px;
 }
 
 @media screen and (max-width: 500px) {

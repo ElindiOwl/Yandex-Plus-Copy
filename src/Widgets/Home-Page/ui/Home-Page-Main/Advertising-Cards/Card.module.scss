@@ -8,3 +8,36 @@
   padding-top: 24px;
   overflow: hidden;
 }
+
+.genericCard_skeleton {
+  border-radius: 20px;
+  background-color: white;
+  padding-top: 24px;
+  overflow: hidden;
+}
+
+.genericCard_skeleton img {
+  display: none;
+}
+
+.skeletonText {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+}
+
+.skeletonText h2 {
+  background-color: #f1f3f5;
+  color: rgba(241, 243, 245, 0);
+  border-radius: 15px;
+  height: 29px;
+  width: 300px;
+}
+
+.skeletonText p {
+  background-color: #f1f3f5;
+  color: rgba(241, 243, 245, 0);
+  border-radius: 15px;
+  height: 24px;
+  width: 150px;
+}

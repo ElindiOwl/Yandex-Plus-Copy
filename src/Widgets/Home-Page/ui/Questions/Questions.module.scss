@@ -32,8 +32,8 @@
 .questions__headerContainer {
   display: flex;
   justify-content: space-between;
-  height: 22px;
   cursor: pointer;
+  height: 100%;
 }
 
 @media screen and (max-width: 800px) {

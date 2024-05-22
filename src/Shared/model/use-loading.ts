@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const loadingTextPlaceHolder = (data) => {
+export const useLoading = <T, >(data: T[]) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {

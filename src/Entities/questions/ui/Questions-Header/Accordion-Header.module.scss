@@ -1,14 +1,26 @@
-.headerContainer {
-  
+.dropdownMenu__accordionHeader {
+
+}
+
+.headerContainer__text {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .headerContainer_hoverEffect:hover {
   color: red;
 }
 
+.headerContainer__svgContainer {
+  width: 15px;
+  height: 11px;
+  justify-Content: center;
+}
+
 .expand__title_arrow {
+  width: 15px;
+  height: 11px;
   transition: transform 0.2s ease-in-out;
-  margin-top: 7px;
 }
 
 .rotated {

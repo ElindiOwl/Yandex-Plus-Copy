@@ -1,6 +1,9 @@
 import './Header-Portrait.scss';
-import portrait from '../../../../Shared/assets/Icons/Island.png';
 import { useMenu } from 'src/Shared/lib/useMenu';
+import { DropDownMenuItem } from 'src/Shared/ui/DropDown-Menu/DropDown-Menu-Item/DropDown-Menu-Item.tsx';
+import portrait from '/src/Shared/assets/Icons/Island.png';
+import account from '/src/Shared/assets/Icons/account.png';
+import exit from '/src/Shared/assets/Icons/exit.png';
 
 
 export const HeaderPortrait = () => {
@@ -10,16 +13,15 @@ export const HeaderPortrait = () => {
         <>
             <div className='headerPortraitDiv' ref={menuRef}>
                 <div className={`dropdown ${isMenuOpen ? 'show' : ''}`}>
-                    <button className='portraitButton' type='button' id='dropdownMenuButton' onClick={toggleMenu}>
-                        <img src={portrait} height='100%' width='45' alt='Portrait' />
+                    <button className='portraitButton' id='dropdownMenuButton' onClick={toggleMenu}>
+                        <img src={portrait} alt='Portrait' />
                     </button>
                     <div className={`dropdown-menu ${isMenuOpen ? 'show' : ''}`} aria-labelledby='dropdownMenuButton'>
                         <div>
                             <div className='Header'>
-                                <div className='headerPanel d-flex justify-content-between'>
+                                <div className='headerPanel'>
                                     <div className='Header-Side'>
-                                        <a href='Pages/MainPage/Components/Header/HeaderPortrair/HeaderPortrait'
-                                           target='_parent'>
+                                        <a href=''>
                                             <svg aria-hidden='true' className='logo_root__U0pum' focusable='false'
                                                  height='20' viewBox='0 0 62 30' width='41'>
                                                 <circle cx='15' cy='14.9998' r='15' fill='#fc3f1d'></circle>
@@ -33,7 +35,7 @@ export const HeaderPortrait = () => {
                                         </a>
                                     </div>
                                     <div className='exitButton' onClick={toggleMenu}>
-                                        <button type='button' color='black'>
+                                        <button>
                                             <svg width='24' height='24' viewBox='0 0 24 24' fill='none'
                                                  focusable='false'
                                                  aria-hidden='true' className='SvgIcon'>
@@ -44,36 +46,19 @@ export const HeaderPortrait = () => {
                                         </button>
                                     </div>
                                 </div>
-                                <div className='headerContent d-flex flex-column align-items-center'>
-                                    <a href='Pages/MainPage/Components/Header/HeaderPortrair/HeaderPortrait'>
-                                        <img src={portrait} height='100%' width='50'
-                                             className='d-inline-block align-top'
-                                             alt='Logo' />
+                                <div className='headerContent'>
+                                    <a href=''>
+                                        <img src={portrait} alt='Logo' />
                                     </a>
                                     <h5 className=''>UserName</h5>
                                     <p className=''>username</p>
                                 </div>
                             </div>
                             <div className='headerPortraitBottomButtons'>
-                                <a href='https://passport.yandex.ru/auth?origin=plus&mode=add-user&retpath=https%3A%2F%2Fplus.yandex.ru%2F%3Fncrnd%3D24994'
-                                   className='dropdown-item'>
-                                    <svg width='24' height='24' viewBox='0 0 24 24' fill='none' focusable='false'
-                                         aria-hidden='true' className='SvgIcon'>
-                                        <path fillRule='evenodd' clipRule='evenodd'
-                                              d='M1.707 17.704c1.12-1.12 2.853-1.7 5.256-1.707.274-.704.62-1.377.985-1.972A15.707 15.707 0 0 0 7 13.997c-2.912 0-5.165.751-6.707 2.293a1 1 0 1 0 1.414 1.414zm5.294-4.907c-2.63 0-4.501-2.692-4.501-5.83 0-2.97 1.596-4.97 4.501-4.97 2.905 0 4.499 2 4.499 4.97 0 3.138-1.87 5.83-4.499 5.83zm0-2c1.307 0 2.499-1.596 2.499-3.83 0-2.009-.84-2.97-2.499-2.97-1.66 0-2.501.962-2.501 2.97 0 2.234 1.194 3.83 2.501 3.83zM17 12a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm-7 5a7 7 0 1 1 14 0 7 7 0 0 1-14 0zm7-3.5a1 1 0 0 0-1 1V16h-1.5a1 1 0 1 0 0 2H16v1.5a1 1 0 1 0 2 0V18h1.5a1 1 0 1 0 0-2H18v-1.5a1 1 0 0 0-1-1z'
-                                              fill='currentColor'></path>
-                                    </svg>
-                                    Добавить аккаунт
-                                </a>
-                                <a href='/promo' className='dropdown-item'>
-                                    <svg width='24' height='24' viewBox='0 0 24 24' fill='none' focusable='false'
-                                         aria-hidden='true' className='SvgIcon'>
-                                        <path fillRule='evenodd' clipRule='evenodd'
-                                              d='M21.593 10.943c.584.585.584 1.53 0 2.116L18.71 15.95c-.39.39-1.03.39-1.42 0a.996.996 0 0 1 0-1.41 9.552 9.552 0 0 1 1.689-1.345l.387-.242-.207-.206a10 10 0 0 1-2.24.254H8.998a1 1 0 1 1 0-2h7.921a10 10 0 0 1 2.24.254l.207-.206-.386-.241a9.562 9.562 0 0 1-1.69-1.348.996.996 0 0 1 0-1.41c.39-.39 1.03-.39 1.42 0l2.883 2.893zM14 16a1 1 0 0 0-1 1v1.5a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1.505a1 1 0 1 0 2 0V5.5A2.5 2.5 0 0 0 12.5 3h-7A2.5 2.5 0 0 0 3 5.5v13A2.5 2.5 0 0 0 5.5 21h7a2.5 2.5 0 0 0 2.5-2.5V17a1 1 0 0 0-1-1z'
-                                              fill='currentColor'></path>
-                                    </svg>
-                                    Выйти
-                                </a>
+                                <DropDownMenuItem link={'/account'} image={account}
+                                                  description={'Добавить аккаунт'} optionalClassName={'dropDownItem'} />
+                                <DropDownMenuItem link={'/exit'} image={exit}
+                                                  description={'Выйти'} optionalClassName={'dropDownItem'} />
                             </div>
                         </div>
                     </div>

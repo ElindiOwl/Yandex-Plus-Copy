@@ -1,0 +1,78 @@
+.suka {
+  display: flex;
+  justify-content: center;
+  max-width: 1950px;
+}
+
+.dropdownMenu {
+  display: flex;
+  justify-content: center;
+}
+
+.dropdownMenu__items {
+  width: 320px;
+  padding: 25px 20px;
+  border-color: transparent;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  position: fixed;
+  top: 55px;
+  z-index: 800;
+}
+
+.dropdownMenu__accordion {
+  padding: 7px 12px;
+}
+
+.dropdownMenu__accordionHeader {
+  display: flex;
+  justify-content: left;
+  height: 22px;
+  cursor: pointer;
+}
+
+.dropdownMenu__accordionHeader h2 {
+  font-size: 17px;
+}
+
+.dropdownMenu__accordionHeader p {
+  padding: 0 10px;
+}
+
+.dropdownMenu__overlay {
+  display: none;
+  z-index: 200;
+}
+
+@media screen and (max-width: 800px) {
+  .dropdownMenu__overlay {
+    background: rgba(10, 10, 10, 0.8);
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    display: block;
+  }
+
+  .dropdownMenu__items {
+    position: fixed;
+    z-index: 400;
+    left: -10px;
+    min-width: 100vw;
+    top: -462px;
+    animation: slideDown 0.3s ease forwards;
+    border-radius: 0;
+  }
+
+  @keyframes slideDown {
+    from {
+      top: -462px;
+    }
+    to {
+      top: 60px;
+    }
+  }
+}
