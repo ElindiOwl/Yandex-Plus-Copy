@@ -33,8 +33,8 @@ export const CardsSlider: FC<SliderProps> = ({
                                                  cards = [],
                                                  slidesPerGroup = 1,
                                                  slidesPerView = 4,
-                                                 cardSize,
-                                                 cardType,
+                                                 cardSize = 'tall',
+                                                 cardType = 'simple',
                                                  isLoading,
                                              }) => {
     const Card = cardsType[cardType];

@@ -2,9 +2,10 @@ import {
     AccordionListItem,
 } from 'src/Shared/ui/Accordion/Questions-List-Item/Accordion-List-Item.tsx';
 import { FC } from 'react';
+import { AccordionMap } from 'src/Shared/lib';
 
 interface QuestionsAccordionProps {
-    mapToUse: Record<string, { header: string; description: string; }>;
+    mapToUse: AccordionMap;
     containerClassName: string;
     headerContainerClassName?: string;
     isHoverEffect?: boolean;

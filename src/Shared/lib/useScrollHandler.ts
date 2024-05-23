@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const useScrollHandler = (isScrollableStyle) => {
+export const useScrollHandler = (isScrollableStyle: boolean) => {
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {

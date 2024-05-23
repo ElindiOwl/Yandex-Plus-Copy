@@ -19,30 +19,36 @@ interface DropDownMenuProps {
 
 const portal = document.getElementById('portal');
 
-export const DropDownMenu: FC<DropDownMenuProps> = ({ onClick }) =>
-    ReactDOM.createPortal(
-        <div className={style.suka}>
-            <div className={style.dropdownMenu}>
-                <div className={style.dropdownMenu__overlay} onClick={onClick}></div>
-                <div id='dropdownMenu' className={style.dropdownMenu__items}>
-                    <DropDownMenuItem link={'/subControl'} image={subControl} description={'Управление подпиской'} />
-                    <br />
-                    <DropDownMenuItem link={'/family'} image={family} description={'Плюс для близких'} />
-                    <DropDownMenuItem link={'/sharing'} image={sharing} description={'Подарить Плюс'} />
-                    <br />
-                    <CustomAccordion mapToUse={menuAccordionMap} containerClassName={style.dropdownMenu__accordion}
-                                     headerContainerClassName={style.dropdownMenu__accordionHeader} />
+export const DropDownMenu: FC<DropDownMenuProps> = ({ onClick }) => {
+    if (portal) {
+        return ReactDOM.createPortal(
+            <div className={style.suka}>
+                <div className={style.dropdownMenu}>
+                    <div className={style.dropdownMenu__overlay} onClick={onClick}></div>
+                    <div id='dropdownMenu' className={style.dropdownMenu__items}>
+                        <DropDownMenuItem link={'/subControl'} image={subControl}
+                                          description={'Управление подпиской'} />
+                        <br />
+                        <DropDownMenuItem link={'/family'} image={family} description={'Плюс для близких'} />
+                        <DropDownMenuItem link={'/sharing'} image={sharing} description={'Подарить Плюс'} />
+                        <br />
+                        <CustomAccordion mapToUse={menuAccordionMap} containerClassName={style.dropdownMenu__accordion}
+                                         headerContainerClassName={style.dropdownMenu__accordionHeader} />
 
-                    <DropDownMenuItem link={'/allOptions'} image={options} description={'Все опции Плюса'} />
-                    <br />
-                    <DropDownMenuItem link={'/support'} image={support} description={'Поддержка'} />
-                    <DropDownMenuItem link={'/suggestions'} image={suggestions}
-                                      description={'Предложение по улучшению'} />
-                    <br />
-                    <DropDownMenuItem link={'/promo'} image={promo} description={'Активация промокода'} />
+                        <DropDownMenuItem link={'/allOptions'} image={options} description={'Все опции Плюса'} />
+                        <br />
+                        <DropDownMenuItem link={'/support'} image={support} description={'Поддержка'} />
+                        <DropDownMenuItem link={'/suggestions'} image={suggestions}
+                                          description={'Предложение по улучшению'} />
+                        <br />
+                        <DropDownMenuItem link={'/promo'} image={promo} description={'Активация промокода'} />
+                    </div>
                 </div>
             </div>
-        </div>
-        ,
-        portal,
-    );
+            ,
+            portal,
+        );
+    }
+};
+
+

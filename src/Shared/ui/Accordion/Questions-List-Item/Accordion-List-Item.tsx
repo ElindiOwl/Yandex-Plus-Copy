@@ -8,16 +8,16 @@ export interface AccordionListProps {
     header: string | React.ReactNode;
     description: string | React.ReactNode;
     containerClassName?: string;
-    headerContainerClassName: string;
-    isHoverEffect: boolean;
+    headerContainerClassName?: string;
+    isHoverEffect?: boolean;
 }
 
 export const AccordionListItem: FC<AccordionListProps> = ({
                                                               header,
                                                               description,
                                                               containerClassName = '',
-                                                              headerContainerClassName,
-                                                              isHoverEffect,
+                                                              headerContainerClassName = '',
+                                                              isHoverEffect = false,
                                                           }) => {
     const [isDescriptionVisible, setIsDescriptionVisible] = useState(false);
 

@@ -5,15 +5,14 @@ import { CardSliderTemplate } from 'src/Entities/advertising/model/CardSliderTem
 
 export const CardComposite: FC<CardSliderTemplate> = forwardRef(({
                                                                      src,
-                                                                     cardSize,
+                                                                     cardSize = 'tall',
                                                                      sliderHeader,
                                                                      sliderDescription,
-                                                                 }, ref) => {
+                                                                 }) => {
     const size = cardSizeVariants[cardSize];
 
     return (
         <button
-            ref={ref}
             className={`${style.cardSetButton} ${size}`}
         >
             <img className={style.compositeImage} src={src} alt='' />
