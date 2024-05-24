@@ -1,18 +1,19 @@
-import { useEffect, useState } from 'react';
-import { CardSliderTemplate } from '../CardSliderTemplate';
-import { getYandexMusicImages } from 'src/Entities/advertising/api/Get-Advertising-Card-Images/Get-Music-Images';
+import { useEffect, useState } from 'react'
+import { getYandexMusicImages } from 'src/Entities/advertising/api/Get-Advertising-Card-Images/Get-Music-Images'
+
+import { CardSliderTemplate } from '../CardSliderTemplate'
 
 export const useMusicImages = () => {
-    const [musicImages, setMusicImages] = useState<CardSliderTemplate[]>([]);
+	const [musicImages, setMusicImages] = useState<CardSliderTemplate[]>([])
 
-    useEffect(() => {
-        const fetchMusicImages = async () => {
-            const musicCardImagesDTO = await getYandexMusicImages();
-            setMusicImages(musicCardImagesDTO);
-        };
+	useEffect(() => {
+		const fetchMusicImages = async () => {
+			const musicCardImagesDTO = await getYandexMusicImages()
+			setMusicImages(musicCardImagesDTO)
+		}
 
-        fetchMusicImages();
-    }, []);
+		fetchMusicImages()
+	}, [])
 
-    return musicImages;
-};
+	return musicImages
+}

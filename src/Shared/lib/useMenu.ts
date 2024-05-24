@@ -1,26 +1,26 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react'
 
 export const useMenu = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const menuRef = useRef<HTMLDivElement>(null);
+	const [isMenuOpen, setIsMenuOpen] = useState(false)
+	const menuRef = useRef<HTMLDivElement>(null)
 
-    useEffect(() => {
-        const handleOutsideClick = (event: MouseEvent) => {
-            if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
-                setIsMenuOpen(false);
-            }
-        };
+	useEffect(() => {
+		const handleOutsideClick = (event: MouseEvent) => {
+			if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+				setIsMenuOpen(false)
+			}
+		}
 
-        document.addEventListener('click', handleOutsideClick);
+		document.addEventListener('click', handleOutsideClick)
 
-        return () => {
-            document.removeEventListener('click', handleOutsideClick);
-        };
-    }, []);
+		return () => {
+			document.removeEventListener('click', handleOutsideClick)
+		}
+	}, [])
 
-    const toggleMenu = () => {
-        setIsMenuOpen(!isMenuOpen);
-    };
+	const toggleMenu = () => {
+		setIsMenuOpen(!isMenuOpen)
+	}
 
-    return { isMenuOpen, menuRef, toggleMenu };
-};
+	return { isMenuOpen, menuRef, toggleMenu }
+}

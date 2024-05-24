@@ -1,6 +1,7 @@
-import style from './DropDown-Menu-Item.module.scss';
-import { FC } from 'react';
-import { cn } from 'src/Shared/lib';
+import { FC } from 'react'
+import { cn } from 'src/Shared/lib'
+
+import style from './DropDown-Menu-Item.module.scss'
 
 interface DropDownMenuItemProps {
     link: string;
@@ -10,15 +11,15 @@ interface DropDownMenuItemProps {
 }
 
 export const DropDownMenuItem: FC<DropDownMenuItemProps> = ({ link, image, description, optionalClassName = '' }) => {
-    return (
-        <div className={cn([style.menuItem, optionalClassName])}>
-            <a href={link}>
-                <img
-                    src={image}
-                    alt='media'
-                />
-                {description}
-            </a>
-        </div>
-    );
-};
+	return (
+		<div className={cn([style.menuItem, optionalClassName])}>
+			<a href={link}>
+				<img
+					alt='media'
+					src={image}
+				/>
+				{description}
+			</a>
+		</div>
+	)
+}

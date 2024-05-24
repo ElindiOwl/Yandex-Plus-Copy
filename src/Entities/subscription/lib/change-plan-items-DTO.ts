@@ -1,25 +1,25 @@
-import { ChangePlanItems } from 'src/Entities/subscription/model/change-plan-items-types.ts';
+import { ChangePlanItems } from 'src/Entities/subscription/model/change-plan-items-types.ts'
 
 export const changePlanItemsDTO: ChangePlanItems[] = [
-    {
-        type: 'month',
-        header: 'Яндекс Плюс',
-        description: '299 ₽ в месяц',
-        isActive: true,
-        discount: '',
-    },
-    {
-        type: 'year',
-        header: 'Плюс Больше кино на год',
-        description: '2 490 ₽ в первый год',
-        isActive: false,
-        discount: '47%',
-    },
-    {
-        type: 'month',
-        header: 'Плюс с Амедиатекой',
-        description: '699 ₽ в месяц',
-        isActive: false,
-        discount: '',
-    },
-];
+	{
+		description: '299 ₽ в месяц',
+		discount: '',
+		header: 'Яндекс Плюс',
+		isActive: true,
+		type: 'month',
+	},
+	{
+		description: '2 490 ₽ в первый год',
+		discount: '47%',
+		header: 'Плюс Больше кино на год',
+		isActive: false,
+		type: 'year',
+	},
+	{
+		description: '699 ₽ в месяц',
+		discount: '',
+		header: 'Плюс с Амедиатекой',
+		isActive: false,
+		type: 'month',
+	},
+]

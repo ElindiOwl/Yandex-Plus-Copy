@@ -1,3 +1,5 @@
-import { AccordionListProps } from 'src/Shared/ui/Accordion/Questions-List-Item/Accordion-List-Item.tsx';
+import { ReactNode } from 'react'
 
-export type AccordionMap = { [key: string]: AccordionListProps };
+type AccordionItem = { header: string | ReactNode, description: string | ReactNode }
+
+export type AccordionMap = Record<string, AccordionItem>

@@ -1,1 +1,1 @@
-export const getIsDesktop = () => window.innerWidth > 800;
+export const getIsDesktop = () => window.innerWidth > 800

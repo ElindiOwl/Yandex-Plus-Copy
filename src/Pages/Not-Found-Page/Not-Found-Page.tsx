@@ -1,10 +1,10 @@
-import { ErrorMessageOnPage } from 'src/Shared/ui/Error-Message-On-Page/Error-Message-On-Page';
+import { ErrorMessageOnPage } from 'src/Shared/ui/Error-Message-On-Page/Error-Message-On-Page'
 
 function NotFoundPage() {
 
-    return (
-        <ErrorMessageOnPage />
-    );
+	return (
+		<ErrorMessageOnPage />
+	)
 }
 
-export default NotFoundPage;
+export default NotFoundPage

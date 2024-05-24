@@ -1,20 +1,21 @@
-import { useEffect, useState } from 'react';
-import { CardSliderTemplate } from '../CardSliderTemplate';
+import { useEffect, useState } from 'react'
 import {
-    getAboutCashBackImages,
-} from 'src/Entities/advertising/api/Get-Advertising-Card-Images/Get-About-CashBack-Images';
+	getAboutCashBackImages,
+} from 'src/Entities/advertising/api/Get-Advertising-Card-Images/Get-About-CashBack-Images'
+
+import { CardSliderTemplate } from '../CardSliderTemplate'
 
 export const useAboutCashBackImages = () => {
-    const [aboutCashBackImages, setAboutCashBackImages] = useState<CardSliderTemplate[]>([]);
+	const [aboutCashBackImages, setAboutCashBackImages] = useState<CardSliderTemplate[]>([])
 
-    useEffect(() => {
-        const fetchAboutCashBackImages = async () => {
-            const aboutCashBackCardImagesDTO = await getAboutCashBackImages();
-            setAboutCashBackImages(aboutCashBackCardImagesDTO);
-        };
+	useEffect(() => {
+		const fetchAboutCashBackImages = async () => {
+			const aboutCashBackCardImagesDTO = await getAboutCashBackImages()
+			setAboutCashBackImages(aboutCashBackCardImagesDTO)
+		}
 
-        fetchAboutCashBackImages();
-    }, []);
+		fetchAboutCashBackImages()
+	}, [])
 
-    return aboutCashBackImages;
-};
+	return aboutCashBackImages
+}
