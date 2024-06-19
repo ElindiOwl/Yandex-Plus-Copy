@@ -3,7 +3,7 @@ import react from '@vitejs/plugin-react';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	base: 'https://elindiowl.github.io/Yandex-Plus-Copy',
+	base: './',
 	plugins: [react()],
 	resolve: {
 		alias: {
