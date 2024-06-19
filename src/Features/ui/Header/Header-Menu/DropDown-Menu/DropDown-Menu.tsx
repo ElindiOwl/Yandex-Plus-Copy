@@ -31,7 +31,7 @@ export const DropDownMenu: FC<DropDownMenuProps> = ({ onClick }) => {
 				<div className={style.dropdownMenu__overlay} onClick={onClick}></div>
 				<div className={style.dropdownMenu__items} id='dropdownMenu'>
 					<DropDownMenuItem description={'Управление подпиской'} image={subControl}
-						link={'/subControl'} />
+						link={'subControl'} />
 					<br />
 					<DropDownMenuItem description={'Плюс для близких'} image={family} link={'/family'} />
 					<DropDownMenuItem description={'Подарить Плюс'} image={sharing} link={'/sharing'} />

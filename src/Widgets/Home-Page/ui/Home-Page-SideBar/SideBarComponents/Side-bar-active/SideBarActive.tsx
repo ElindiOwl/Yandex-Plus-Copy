@@ -1,11 +1,13 @@
-import './SideBarActive.scss'
-import portrait from '../../../../../../Shared/assets/Icons/Island.png'
+import './SideBarActive.scss';
+import { Link } from 'react-router-dom';
 
-const sideBarActive = () => {
+import portrait from '../../../../../../Shared/assets/Icons/Island.png';
+
+const SideBarActive = () => {
 	return (
 		<div className='plusBackgroundActive'>
-			<a className='pluslink'
-				href='/subControl'>
+			<Link className='pluslink'
+				to='/subControl'>
 				<div className='plusInside'>
 					<div className='linkDiv'>
 						<h6 className='plusActive'>Плюс <br />активен</h6>
@@ -15,15 +17,16 @@ const sideBarActive = () => {
 							viewBox='0 0 24 24'
 							width='10'
 							xmlns='http://www.w3.org/2000/svg'>
-							<path clipRule='evenodd' d='M8.434 4.434a.8.8 0 0 0 0 1.13L14.87 12l-6.435 6.434a.8.8 0 0 0 1.132 1.132l7-7a.8.8 0 0 0 0-1.131l-7-7a.8.8 0 0 0-1.132 0Z'
+							<path clipRule='evenodd'
+								d='M8.434 4.434a.8.8 0 0 0 0 1.13L14.87 12l-6.435 6.434a.8.8 0 0 0 1.132 1.132l7-7a.8.8 0 0 0 0-1.131l-7-7a.8.8 0 0 0-1.132 0Z'
 								fill='currentColor'
 								fillRule='evenodd'></path>
 						</svg>
 					</div>
 				</div>
-			</a>
+			</Link>
 		</div>
-	)
-}
+	);
+};
 
-export default sideBarActive
+export default SideBarActive;

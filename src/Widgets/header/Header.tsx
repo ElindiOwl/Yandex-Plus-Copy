@@ -1,9 +1,10 @@
-import logo from 'src/Shared/assets/Icons/Logo.png'
-import './Header.scss'
-import { FC } from 'react'
-import { useScrollHandler } from 'src/Shared/lib/useScrollHandler.ts'
-import { HeaderPortrait } from 'src/Features/ui/Header/HeaderPortrait/Header-Portrait.tsx'
-import { HeaderMenu } from 'src/Features/ui/Header/Header-Menu/Header-Menu.tsx'
+import logo from 'src/Shared/assets/Icons/Logo.png';
+import './Header.scss';
+import { FC } from 'react';
+import { useScrollHandler } from 'src/Shared/lib/useScrollHandler.ts';
+import { HeaderPortrait } from 'src/Features/ui/Header/HeaderPortrait/Header-Portrait.tsx';
+import { HeaderMenu } from 'src/Features/ui/Header/Header-Menu/Header-Menu.tsx';
+import { Link } from 'react-router-dom';
 
 
 interface HeaderProps {
@@ -11,11 +12,11 @@ interface HeaderProps {
 }
 
 /*Вынести в энтити и ему подобные + в отдельный файл вынести z-индексы*/
-export const HEADER = 'header'
+export const HEADER = 'header';
 
 const Header: FC<HeaderProps> = ({ isScrollableStyle = true }) => {
 
-	const scrolled = useScrollHandler(isScrollableStyle)
+	const scrolled = useScrollHandler(isScrollableStyle);
 
 	return (
 	/*исправить классы и разбить на компоненты*/
@@ -24,9 +25,9 @@ const Header: FC<HeaderProps> = ({ isScrollableStyle = true }) => {
 		>
 			<div className='navbarDiv'>
 				<div className='headerLogo'>
-					<a className='logo' href='/'>
+					<Link className='logo' to='/'>
 						<img alt='Logo' className='logoImage' height='100%' src={logo} width='190' />
-					</a>
+					</Link>
 				</div>
 				<div className='blankDiv'>
 
@@ -41,7 +42,7 @@ const Header: FC<HeaderProps> = ({ isScrollableStyle = true }) => {
 
 
 		</header>
-	)
-}
+	);
+};
 
-export default Header
+export default Header;
