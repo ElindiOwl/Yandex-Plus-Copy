@@ -8,7 +8,7 @@ import NotFoundPage from 'src/Pages/Not-Found-Page/Not-Found-Page';
 export const AppRoutes = () => {
 	return (
 		<Routes>
-			<Route element={<HomePage />} path='/Yandex-Plus-Copy' />
+			<Route element={<HomePage />} path='/' />
 			<Route element={<SubscriptionControlPage />} path='/subControl' />
 			<Route element={<PaymentsHistoryPage />} path='/subControlHistoryPage' />
 			<Route element={<NotFoundPage />} path='*' />
